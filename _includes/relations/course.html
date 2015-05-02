@@ -1,0 +1,17 @@
+<!-- School -->
+{% assign schools = site.schools | where: 'title', page.school %}
+{% for school in schools %}
+   {% capture  schoolTitle %}{{ school.title }}{% endcapture %}
+   {% capture  schoolUrl %}{{ school.url }}{% endcapture %}
+   {% capture  schoolPhone %}{{ school.phone }}{% endcapture %}
+   {% capture  schoolContent %}{{ school.content }}{% endcapture %}
+      <!-- Place -->
+      {% assign places = site.places | where: 'admin', school.place %}
+      {% for place in places %}
+         {% capture  placeTitle %}{{ place.title }}{% endcapture %}
+         {% capture  placeUrl %}{{ place.url }}{% endcapture %}   
+         {% capture  placeAddress %}{{ place.address }}{% endcapture %}
+         {% capture  placeLat %}{{ place.long }}{% endcapture %}
+         {% capture  placeLong %}{{ place.lat}}{% endcapture %}
+      {% endfor %}
+{% endfor %}

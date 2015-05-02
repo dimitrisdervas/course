@@ -1,0 +1,28 @@
+/*
+    Document   : newcourse/_includes/sass/_susy-config.scss
+    Created on : 2015-05-01 09:50 AM
+    Author     : dimdervas
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: 70em,
+  container-position: center,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#969696, .25),
+    output: background,
+    toggle: top right
+  )
+);

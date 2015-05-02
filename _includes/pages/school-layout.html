@@ -1,0 +1,47 @@
+{% include relations/school.html %}
+
+<h1>{{page.title}}</h1>
+<h4>{{page.phone}}</h4>
+<p>{{page.content}}</p>
+
+ <h3>Courses</h3> 
+ {% assign courses = site.courses | where: 'school', page.title %}
+ 	{% for course in courses  %}
+       <a href="{{ site.baseurl}}{{ course.url }}">{{ course.title }}</a>
+{{ course.categories }}
+         {% for day in course.days %}
+         <div class="days">
+            <div class="day">{{ day.day }}</div>
+            <div class="time">{{ day.time}}</div>  
+            </div>
+         {% endfor %}
+ 		{% endfor %}
+
+ <h3>Places</h3> 
+       {% assign test = site.places | where: 'admin', page.place %}
+      {% for place in test %}
+         <a href="{{ site.baseurl}}{{ place.url }}">{{ place.title }}</a>
+      {% endfor %}
+
+<div id="map_canvas"></div>
+
+
+<!-- <div class="cards">
+   {% assign courses = site.courses | where: 'school', page.title %}
+ 	{% for course in courses  %}
+        <div class="card">
+          <div class="card-image">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+          </div>
+          <div class="card-header">
+            <a href="{{ site.baseurl}}{{ course.url }}">{{ course.title }}</a>
+          </div>
+           <div class="days">
+            {% for day in course.days %}
+               <div class="day">{{ day.day }}</div>
+               <div class="time">{{ day.time}}</div> 
+            {% endfor %}
+               </div>
+           </div>
+   {% endfor %}
+</div> -->

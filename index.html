@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+
+
+
+<div class="cards">
+   {% for course in site.courses %}
+     <!-- Masonry gutter sizer-->
+     <div class="cards-gutter"></div>
+     <!-- Masonry columnWidth sizer -->
+     <div class="cards-column"></div>
+   <div class="cards-item">
+<!-- Cards  Image -->
+      <div class="cards-img">
+         <img src="http://placehold.it/350x250">
+         </div>
+<!-- Cards Text -->
+      <div class="cards-text">
+   <!-- Course Title -->
+           <div class="cards-title"><a href="{{ course.url }}">{{ course.title }}</a></div>
+           <p>{{ course.content }}</p>
+         </div>
+   <!-- Find School url -->
+           {% assign schools = site.schools | where: 'title' , course.school %}
+           {% for school in schools %}
+            <div class="cards-school">
+             <div class="cards-subtitle"><a href="{{ school.url }}">{{ school.title }}</a></div>
+               </div>
+           {% endfor %} 
+      <div class="cards-categories">
+      {{ course.categories}} , {{ course.age}}, {{ course.level}}
+         </div>
+      </div>      
+    {% endfor %}   
+</div>
+

@@ -1,0 +1,89 @@
+/**
+ * Drop v6.1.3
+ * Simple, mobile-friendly dropdown menus, by Chris Ferdinandi.
+ * http://github.com/cferdinandi/drop
+ * 
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
+ */
+
+/**
+ * Styling for expand/collapse icons
+ */
+/* line 4, ../components/_drop-jumbo.scss */
+.dropdown-basic > a .dropdown-show,
+.dropdown-basic > a .dropdown-hide,
+.js-drop .dropdown-basic > a.active .dropdown-show {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 11, ../components/_drop-jumbo.scss */
+.js-drop .dropdown-basic > a .dropdown-show,
+.js-drop .dropdown-basic > a.active .dropdown-hide {
+  display: inline-block;
+  visibility: visible;
+}
+
+/**
+ * Styling for the dropdown content.
+ * Hides the content by default.
+ */
+/* line 21, ../components/_drop-jumbo.scss */
+.dropdown-menu-jumbo {
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  float: left;
+  right: 0;
+  width: 100%;
+  margin-top: 0.5em;
+  text-align: left;
+  background-color: #f4f4f4;
+  z-index: 1000;
+}
+
+/**
+ * When a dropdown is active, display it.
+ */
+/* line 37, ../components/_drop-jumbo.scss */
+.dropdown-menu-jumbo.active {
+  display: block;
+  visibility: visible;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+/**
+ * Optional small screen styling for use with collapse-and-toggle navigation menus.
+ * @link http://cferdinandi.github.com/astro/
+ */
+@media (max-width: 40em) {
+  /**
+   * Switch dropdown content to relative positioning.
+   * Add a border-radius.
+   */
+  /* line 54, ../components/_drop-jumbo.scss */
+  .js-drop .dropdown-menu-jumbo {
+    position: relative;
+    float: none;
+    border-radius: 0.25em;
+  }
+
+  /**
+   * Add padding to active dropdown content
+   */
+  /* line 63, ../components/_drop-jumbo.scss */
+  .js-drop .dropdown-menu-jumbo.active {
+    padding: 0.5em;
+  }
+
+  /**
+   * For use with the Kraken Grid.
+   * If using the .container class for dropdown content, give it a width of 100%.
+   */
+  /* line 71, ../components/_drop-jumbo.scss */
+  .js-drop .dropdown-menu-jumbo .container {
+    width: 100%;
+  }
+}

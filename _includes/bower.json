@@ -1,0 +1,36 @@
+{
+  "name": "techangel-front-tools",
+  "version": "0.0.1",
+  "authors": [
+    "dimdervas"
+  ],
+  "description": "Techangel sass and js",
+  "keywords": [
+    "frontend",
+    "css",
+    "javascript"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.2",
+    "toolkit": "~2.1.2",
+    "tabby": "https://github.com/cferdinandi/tabby.git",
+    "drop": "https://github.com/cferdinandi/drop.git",
+    "typeplate-starter-kit": "~2.1.0",
+    "normalize.css": "~3.0.3",
+    "sticky-footer": "https://github.com/cferdinandi/sticky-footer.git",
+    "masonry": "~3.3.0",
+    "imagesloaded": "~3.1.8"
+  },
+  "devDependencies": {
+    "sass-toolkit": "~2.9.0"
+  }
+}

@@ -1,0 +1,55 @@
+/* Cards frontpage */
+.cards {
+   @include container;
+   .cards-column {
+      width: span(4); 
+   }
+   .cards-gutter{
+      width: gutter();
+   }
+   .cards-item {
+      width: span(4);
+      margin-top: gutter();
+      background: $cards-bg;
+      border: 1px solid $light-grey;
+      border-radius: 6px;
+   }
+   .cards-img img {
+      border-radius: 6px 6px 0 0;
+      border-bottom: 1px solid $light-grey;
+   }
+   .cards-text {
+      padding: 1rem;
+      border-bottom: 1px solid $light-grey;
+      .cards-title {
+         font-size: 24px;
+         font-weight: bold;
+         font-family: montserat,open sans,arial;
+         a {
+            color: #AB1386;
+            &:hover {
+              text-decoration: underline;
+            }
+         }
+      }
+   }
+   .cards-school {
+      padding: 1rem 1rem 0;
+      color: #6E6E6E;
+      .cards-subtitle {
+         font-size: 15px;
+         a {
+            display: block;
+            color: $grey;
+         }
+      }
+      &:hover {
+         background: $light-grey;
+      }
+   }
+   .cards-categories {
+      font-size: 14px;
+      padding: 0 1rem 1rem;
+      font-weight: bold;
+   }
+}

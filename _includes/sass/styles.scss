@@ -1,0 +1,63 @@
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import 
+   "sass/susy-config",
+   "bower_components/susy/sass/susy",
+   "bower_components/sass-toolkit/stylesheets/toolkit"
+   ;
+@import 
+   "sass/colors",
+   "sass/layout",
+   "sass/frontpage"
+   ;
+/*  */
+/* Fonts */
+/*  */
+$font-family-text: Roboto slab, Helvetica, Arial, sans-serif;
+$font-family-heading: Montserrat, Helvetica, Arial, sans-serif;
+
+
+/* Global */
+/*  */
+body {
+   font-family: $font-family-text;
+   background: $background-grey;
+   color: $text-color;
+}
+h1,h2,h3,h4,h5,h6 {
+   font-family: $font-family-heading;
+}
+a {
+   text-decoration: none;
+   color: $link-color;
+}
+img {
+   width: 100%;
+}
+
+
+header {
+   margin-bottom: 2em;
+   background: $header-bg;
+   .logo {
+      padding: 1px;
+      a {
+         color: $logo-link;
+      }
+   }
+}
+.days {
+   @include gallery ( 2 of 14 );
+}
+.days {
+   text-align: center;
+   .day {
+      font-weight: bold;
+   }
+}
+/* Course layout */
+.program-title {
+   padding: 0 0 0.4em;
+margin: 0 0 1em;
+border-bottom: 1px solid #ccc;
+font-size: 24px;
+}

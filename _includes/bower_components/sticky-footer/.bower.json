@@ -1,0 +1,14 @@
+{
+  "name": "sticky-footer",
+  "homepage": "https://github.com/cferdinandi/sticky-footer",
+  "_release": "d62810cd27",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d62810cd272feaa01394f53a8647a2f8d7465a96"
+  },
+  "_source": "https://github.com/cferdinandi/sticky-footer.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/cferdinandi/sticky-footer.git",
+  "_direct": true
+}

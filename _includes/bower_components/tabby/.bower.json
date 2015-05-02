@@ -1,0 +1,14 @@
+{
+  "name": "tabby",
+  "homepage": "https://github.com/cferdinandi/tabby",
+  "_release": "af26cca07e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "af26cca07eb88654c9c0189313b70d08791648dc"
+  },
+  "_source": "https://github.com/cferdinandi/tabby.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/cferdinandi/tabby.git",
+  "_direct": true
+}

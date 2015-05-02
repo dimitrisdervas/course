@@ -1,0 +1,7 @@
+
+  <!-- Place -->
+      {% assign places = site.places | where: 'admin', page.place %}
+      {% for place in places %}
+         {% capture  placeTitle %}{{ place.title }}{% endcapture %}
+         {% capture  placeUrl %}{{ place.url }}{% endcapture %}        
+      {% endfor %}

@@ -1,0 +1,13 @@
+{
+  "name": "drop",
+  "homepage": "https://github.com/cferdinandi/drop",
+  "_release": "91fda36bb5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "91fda36bb5cca90f3fa54ecd88f37c31e2c8d8d2"
+  },
+  "_source": "https://github.com/cferdinandi/drop.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/cferdinandi/drop.git"
+}
