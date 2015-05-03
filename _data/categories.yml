@@ -1,2 +1,5 @@
 - name: sports
-- name: aikido
+  gr: Άθληση
+
+- name: martialarts
+  gr: Πολεμικές τέχνες

@@ -1,0 +1,20 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+     
+<!--  Logo -->
+    <div class="logo">
+        <a href="{{ site.baseurl }}"><h2>Active Koala</h2></a>
+        </div>
+
+<!--    Menu -->
+     <div class="menu-categories">
+        <ul>
+           <li id="filter-none">Όλα</li>
+           {% for menu in site.data.categories %}            
+               <li id="filter-{{menu.name}}">{{menu.gr}}</li>
+             {% endfor %}
+          </ul>
+        </div>
+
+  </div>
+</header>

@@ -1,0 +1,27 @@
+header {
+   margin-bottom: 2em;
+   background: $header-bg;
+   .logo {
+      @include span( 2 of 12 no-gutters );
+      padding: 1px;
+      a {
+         color: $logo-link;
+      }
+   }
+   .menu-categories {
+      @include span( 10  at 2 of 12);
+      ul {
+
+         li {
+            float: left;
+            display: inline;
+            list-style: none;
+            padding: 10px;
+            &:hover {
+               cursor: pointer;
+               background: #ccc;
+            }
+         }
+      }
+   }
+}

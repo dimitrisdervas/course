@@ -1,9 +1,3 @@
----
-layout: default
-pagename: frontpage
----
-   
- 
 <div id="courses" class="cards {{ course.categories}} {{ course.age}} {{ course.level}}">
 
    
@@ -14,7 +8,7 @@ pagename: frontpage
      <!-- Masonry columnWidth sizer -->
 <!--      <div class="cards-column"></div> -->
  <ul class="list">  
-   {% for course in site.courses %}
+   {% for course in courses %}
 
 <!--  Variables -->
          <!-- Find School url -->
@@ -52,7 +46,7 @@ pagename: frontpage
                   </div>   
       <!--   Categories -->
          <div class="cards-categories">
-            <span><a class="categories" href="{{site.baseurl}}categories/{{ course.categories}}">{{ course.categories}}</a></span>,
+            <span class="categories"><a href="{{site.baseurl}}categories/{{ course.categories}}">{{ course.categories}}</a></span>,
             <span class="age">{{ course.age }}</span>,
             <span class="level">{{ course.level }}</span>
             </div>
@@ -61,4 +55,3 @@ pagename: frontpage
     {% endfor %} 
   </ul>
 </div>
-

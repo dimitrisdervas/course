@@ -1,5 +1,5 @@
 # Site settings
-title: Your awesome title
+title: Find Courses - Active Coala
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -13,7 +13,9 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
-excerpt_separator: "<!--more-->"
+excerpt_separator: <!--more-->
+
+permalink: pretty
 
 sass:
     sass_dir: /_includes
@@ -42,3 +44,10 @@ defaults:
       type: "places"
     values:
      layout: "default"
+ -
+    scope:
+      path: "categories"
+      type: "pages" # previously `page` in Jekyll 2.2.
+    values:
+      layout: "default" # overrides previous default layout
+      pagename: categories

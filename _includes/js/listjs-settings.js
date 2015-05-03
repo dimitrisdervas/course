@@ -1,30 +1,43 @@
 var options = {
-    valueNames: [ 'cards-categories' ]
+  valueNames: [ 'categories' , 'age' , 'level', 'cardstitle'],
+  searchClass: "search"
 };
 
 var coursesList = new List('courses', options);
 
-$('#filter-games').click(function() {
-  coursesList.filter(function(item) {
-    if (item.values().category == "sports") {
-      return true;
-    } else {
-      return false;
-    }
-  });
-  return false;
+var noItems = $('<li id="no-items-found">No items found</li>');
+
+coursesList.on('updated', function(list) {
+  if (list.matchingItems.length == 0) {
+    $(list.list).append(noItems);
+  } else {
+    noItems.detach();
+  }
 });
 
-$('#filter-beverages').click(function() {
-  coursesList.filter(function(item) {
-    if (item.values().category == "adults") {
-      return true;
-    } else {
-      return false;
-    }
-  });
-  return false;
-});
+var searchField = coursesList.helpers.getByClass(document, 'search', true);
+
+coursesList.helpers.events.bind(searchField, 'keyup', function(e) {
+  var target = e.target || e.srcElement; // IE have srcElement
+  coursesList.search(target.value);
+ });
+
+// Filter for each category
+  {% for menu in site.data.categories %} 
+  
+     $('#filter-{{ menu.name }}').click(function() {
+     coursesList.filter(function(item) {
+       if (item.values().categories == "{{ menu.name }}") {
+         return true;
+       } else {
+         return false;
+       }
+     });
+     return false;
+   });
+   
+ {% endfor %}
+
 $('#filter-none').click(function() {
   coursesList.filter();
   return false;

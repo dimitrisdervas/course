@@ -1,0 +1,4 @@
+
+{% assign courses = site.courses | where: 'categories' , page.title %}
+
+{% include courses-cards.html %}
