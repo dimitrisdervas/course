@@ -4,8 +4,13 @@ layout: default
 
 
 <div id="courses" class="cards {{ course.categories}} {{ course.age}} {{ course.level}}">
-<!--    copied from http://codepen.io/jamesbarnett/pen/kcwzq -->
-<!-- for listjs    <div class="filters">
+<!--  for listjs   copied from http://codepen.io/jamesbarnett/pen/kcwzq -->
+        <!-- Masonry gutter sizer-->
+     <div class="cards-gutter"></div>
+     <!-- Masonry columnWidth sizer -->
+     <div class="cards-column"></div>
+<!--  <ul class="list"> -->
+<!--     <div class="filters">
    <input class="search" placeholder="Search lovely things" />
           <ul class="sort-by">
             <li class="sort btn" data-sort="name">Sort by name</li>
@@ -17,12 +22,6 @@ layout: default
             <li class="btn" id="filter-beverages">Adults</li>
           </ul>
    </div> -->
-   
-        <!-- Masonry gutter sizer-->
-     <div class="cards-gutter"></div>
-     <!-- Masonry columnWidth sizer -->
-     <div class="cards-column"></div>
-<!--  for listjs  <ul class="list"> -->
    {% for course in site.courses %}
 <!--    Variables -->
          <!-- Find School url -->
@@ -51,7 +50,7 @@ layout: default
          <div class="cards-perioxi">
             {{ placePerioxi }}
          </div>
-           <p>{{ course.content }}</p>
+           <p>{{ course.excerpt }}</p>
          </div>
       <div class="cards-school-categories">
                 <div class="cards-school">
@@ -59,11 +58,11 @@ layout: default
                   </div>   
       <!--   Categories -->
          <div class="cards-categories">
-         {{ course.categories}} , {{ course.age}}, {{ course.level}}
+         {{ course.categories}} , {{ course.age }} , {{ course.level }}
             </div>
          </div>
       </div>      
     {% endfor %} 
-<!--   for listjs     </ul> -->
+<!--   </ul> -->
 </div>
 

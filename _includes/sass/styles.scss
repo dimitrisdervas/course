@@ -45,19 +45,38 @@ header {
       }
    }
 }
+
+.footer-wrapper {
+   background: $footer-bg;
+}
+
+
+/* Course layout */
+section {
+   background: #fff;
+   padding: 3em 1em;
+   border-radius: 6px;
+}
+.page-title {
+   font-size: 48px;
+   padding: 2rem;
+   text-align: center;
+   font-weight: bold;
+}
+.section-title {
+   padding: 0 0 0.4em;
+   margin: 0 0 1em;
+   border-bottom: 1px solid #ccc;
+   font-size: 24px;
+}
+/* Program Days */
 .days {
    @include gallery ( 2 of 14 );
 }
 .days {
    text-align: center;
+   border-right: 1px solid $border-color;
    .day {
       font-weight: bold;
    }
-}
-/* Course layout */
-.program-title {
-   padding: 0 0 0.4em;
-   margin: 0 0 1em;
-   border-bottom: 1px solid #ccc;
-   font-size: 24px;
 }

@@ -10,30 +10,30 @@ $light-blue: #4280A6;
 $white: #ffffff;
 $light-red: #BD6E6E;
 $pink: #F21C7D;
-/* Defaults */
+/*  */
+/* Defaults Variables for colors*/
+/*  */
+/* Body */
 $background-grey: $lighter-grey;
 $text-color: lighten( $black, 30%);
+/* Links */
 $a-color: $blue;
-$logo-link: $pink;
-$header-bg: $white;
 $hover-color: $light-blue;
+/* Blocks */
+$border-color: $light-grey;
+/* Header */
+$header-bg: $white;
+$logo-link: $pink;
 $header-text: $white;
-$border-color: lighten( $light-grey, 30%);
-$page-title: $light-grey;
-/* Frontpage Slideshow */
+/* Frontpage */
 $cards-bg: $white;
 $button-text: $white;
-/* Reviews */
-$reviews-bg: $light-grey;
-/* Prices */
-$prices-color: $light-blue;
-/* Seasons */
-$seasons-dates: $light-red;
+/* Pages */
+$page-title: $light-grey;
 /* Blocks Background */
 $block-bg: lighten( $black, 85%);
 /* Booking */
 $submit-bg: $blue;
 /* Footer */
-$footer-bg: $lighter-grey;
+$footer-bg: $grey;
 $link-color: #234394;
-$text-small: 24px;

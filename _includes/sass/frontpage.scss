@@ -2,6 +2,10 @@ $font-family-heading: Open sans, Helvetica, Arial, sans-serif;
 /* Cards frontpage */
 .cards {
    @include container;
+   margin-bottom: 3em;
+   ul {
+    @include container;
+   }
    .cards-column {
       width: span(4); 
    }
@@ -12,16 +16,16 @@ $font-family-heading: Open sans, Helvetica, Arial, sans-serif;
       width: span(4);
       margin-top: gutter();
       background: $cards-bg;
-      border: 1px solid $light-grey;
+      border: 1px solid $border-color;
       border-radius: 6px;
    }
    .cards-img img {
       border-radius: 6px 6px 0 0;
-      border-bottom: 1px solid $light-grey;
+      border-bottom: 1px solid $border-color;
    }
    .cards-text {
       padding: 1rem;
-      border-bottom: 1px solid $light-grey;
+      border-bottom: 1px solid $border-color;
       .cards-title {
          font-size: 24px;
          font-weight: bold;

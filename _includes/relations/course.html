@@ -5,6 +5,7 @@
    {% capture  schoolUrl %}{{ school.url }}{% endcapture %}
    {% capture  schoolPhone %}{{ school.phone }}{% endcapture %}
    {% capture  schoolContent %}{{ school.content }}{% endcapture %}
+   {% capture  schoolExcerpt%}{{ school.excerpt }}{% endcapture %}
       <!-- Place -->
       {% assign places = site.places | where: 'admin', school.place %}
       {% for place in places %}
