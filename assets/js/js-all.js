@@ -1,5 +1,6 @@
 ---
 ---
+   {% include js/ejs.js %}
 {% include js/masonry-settings.js %}
 {% include bower_components/tabby/dist/js/classList.min.js %}
 {% include bower_components/tabby/dist/js/tabby.min.js %}

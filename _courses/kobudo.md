@@ -1,7 +1,7 @@
 ---
 title: kobudo for adults
 school: suibukan
-categories: sports
+categories: aikido
 age: adults
 level: intermediate
 days:

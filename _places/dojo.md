@@ -1,7 +1,8 @@
 ---
 title: Dojo
 admin: dojo
-address: 18 noemvriou 21
+address: 18ης Νοέμβρη 21
+perioxi: Τούμπα
 lat: 59.342457
 long: 18.057340
 ---   

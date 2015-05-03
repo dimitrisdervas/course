@@ -1,3 +1,4 @@
+$font-family-heading: Open sans, Helvetica, Arial, sans-serif;
 /* Cards frontpage */
 .cards {
    @include container;
@@ -24,13 +25,21 @@
       .cards-title {
          font-size: 24px;
          font-weight: bold;
-         font-family: montserat,open sans,arial;
+         font-family: $font-family-heading;
          a {
             color: #AB1386;
             &:hover {
               text-decoration: underline;
             }
          }
+      }
+      .cards-perioxi {
+         
+      }
+   }
+   .cards-school-categories {
+      &:hover {
+         background: $lighter-grey;
       }
    }
    .cards-school {
@@ -42,9 +51,6 @@
             display: block;
             color: $grey;
          }
-      }
-      &:hover {
-         background: $light-grey;
       }
    }
    .cards-categories {

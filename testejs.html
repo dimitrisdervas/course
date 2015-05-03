@@ -1,29 +1,17 @@
-{% include relations/school.html %}
-
-<!-- School img -->
- <div class="School-img">
-      <img src="http://placehold.it/850x350" alt="">
-   </div>
-<!-- School Title -->
-<h1>{{page.title}}</h1>
+---
+layout: default
+---
 
 
-<p>{{page.content}}</p>
-<h2>Επικοινωνία</h2>
-<h4>{{page.phone}}</h4>
+<div id="courses" class="cards {{ course.categories}} {{ course.age}} {{ course.level}}">
 
-<!-- Courses -->
-<section>
- <h3>Τμήματα</h3> 
- {% assign courses = site.courses | where: 'school', page.title %}
-   <div id="courses" class="cards {{ course.categories}} {{ course.age}} {{ course.level}}">
    
         <!-- Masonry gutter sizer-->
      <div class="cards-gutter"></div>
      <!-- Masonry columnWidth sizer -->
      <div class="cards-column"></div>
-
-   {% for course in courses %}
+<!--  for listjs  <ul class="list"> -->
+   {% for course in site.courses %}
    <div class="cards-item">
 <!-- Cards  Image -->
       <div class="cards-img">
@@ -32,7 +20,7 @@
 <!-- Cards Text -->
       <div class="cards-text">
    <!-- Course Title -->
-           <div class="cards-title"><a href="{{ site.baseurl}}/{{ course.url }}">{{ course.title }}</a></div>
+           <div class="cards-title"><a href="{{ course.url }}">{{ course.title }}</a></div>
            <p>{{ course.content }}</p>
          </div>
       <div class="cards-school-categories">
@@ -40,7 +28,7 @@
               {% assign schools = site.schools | where: 'title' , course.school %}
               {% for school in schools %}
                <div class="cards-school">
-                <div class="cards-subtitle"><a href="{{ site.baseurl}}/{{ school.url }}">{{ school.title }}</a></div>
+                <div class="cards-subtitle"><a href="{{ school.url }}">{{ school.title }}</a></div>
                   </div>
               {% endfor %} 
       <!--   Categories -->
@@ -50,6 +38,5 @@
          </div>
       </div>      
     {% endfor %} 
+<!--   for listjs     </ul> -->
 </div>
-</section>
-

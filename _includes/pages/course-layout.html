@@ -45,7 +45,7 @@
        
       <div id="map"></div>
       <div class="place-title">
-      <a href="{{ site.baseurl}}/{{ placeUrl }}">{{ placeTitle }}</a>
+      <h2>{{ placeTitle }}</h2>
       </div>
       <div class="place-address">{{ placeAddress }}</div>
       </section>
@@ -54,7 +54,7 @@
 <!-- Sidebar -->
 <div class="sidebar">
    <div class="sidebar-school">
-      <h2>{{ schoolTitle }}</h2>
+      <h2><a href="{{ site.baseurl}}/{{ schoolUrl }}">{{ schoolTitle }}</a></h2>
 
       <div class="phone">{{ schoolPhone }}</div>
       </div>
@@ -69,7 +69,7 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // add a marker in the given location, attach some popup content to it and open the popup
-L.marker([51.5, -0.09]).addTo(map)
+L.marker([{{placeLat}}, {{placeLong}}]).addTo(map)
     .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
     .openPopup();
 </script>

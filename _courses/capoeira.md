@@ -1,7 +1,7 @@
 ---
 title: Capoeira
 school: pitbull
-categories: sports
+categories: aikido
 age: adults
 level: intermediate
 days:

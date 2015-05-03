@@ -1,0 +1,41 @@
+---
+layout: null
+---
+ { 
+{% for category in site.data.categories %}
+
+
+  {% assign courses = site.courses | where: "categories" , category.name %}
+  {% for course in courses %}  
+  
+{{ for}}
+       {% if forloop.first == true %}     
+         "category": "{{ category.name }}", 
+     {% endif %}
+         "course": {
+         "title": "{{ course.title | escape_once  }}",
+         "url" : "{{ course.url }}",
+         "categories" : "{{ course.categories | escape_once  }}",
+         "age" : "{{ course.age | escape_once  }}",
+         "level" : "{{ course.level | escape_once  }}",
+            
+         "school": {
+              {% assign schools = site.schools | where: 'title' , course.school %}
+              {% for school in schools %}               
+                "title" : "{{ school.title }}",
+                "url" : "{{ school.url }}"
+              {% endfor %}
+         }
+      {% if forloop.last == true %}   
+            }
+         {% else %}
+            },
+       {% endif %}
+   {% endfor %}
+      {% if forloop.last == true %}
+         }
+         {% else %}
+         },
+       {% endif %}
+  {% endfor %}
+    }

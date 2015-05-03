@@ -3,14 +3,40 @@ layout: default
 ---
 
 
-
-
-<div class="cards">
-   {% for course in site.courses %}
-     <!-- Masonry gutter sizer-->
+<div id="courses" class="cards {{ course.categories}} {{ course.age}} {{ course.level}}">
+<!--    copied from http://codepen.io/jamesbarnett/pen/kcwzq -->
+<!-- for listjs    <div class="filters">
+   <input class="search" placeholder="Search lovely things" />
+          <ul class="sort-by">
+            <li class="sort btn" data-sort="name">Sort by name</li>
+            <li class="sort btn" data-sort="category">Sort by category</li>
+          </ul>
+          <ul class="filter">
+            <li class="btn" id="filter-none">Show all</li>
+            <li class="btn" id="filter-games">Sports</li>
+            <li class="btn" id="filter-beverages">Adults</li>
+          </ul>
+   </div> -->
+   
+        <!-- Masonry gutter sizer-->
      <div class="cards-gutter"></div>
      <!-- Masonry columnWidth sizer -->
      <div class="cards-column"></div>
+<!--  for listjs  <ul class="list"> -->
+   {% for course in site.courses %}
+<!--    Variables -->
+         <!-- Find School url -->
+              {% assign schools = site.schools | where: 'title' , course.school %}
+              {% for school in schools %}
+                 {% capture  schoolTitle %}{{ school.title }}{% endcapture %}
+                 {% capture  schoolUrl %}{{ school.url }}{% endcapture %}
+         <!--    Find Place Perioxi -->
+                     {% assign places = site.places | where: 'admin', school.place %}
+                     {% for place in places %}
+                        {% capture  placePerioxi %}{{ place.perioxi }}{% endcapture %}
+                     {% endfor %}
+              {% endfor %} 
+   
    <div class="cards-item">
 <!-- Cards  Image -->
       <div class="cards-img">
@@ -19,20 +45,25 @@ layout: default
 <!-- Cards Text -->
       <div class="cards-text">
    <!-- Course Title -->
-           <div class="cards-title"><a href="{{ course.url }}">{{ course.title }}</a></div>
+           <div class="cards-title">
+              <a href="{{ site.baseurl}}/{{ course.url }}">{{ course.title }}</a>
+         </div>
+         <div class="cards-perioxi">
+            {{ placePerioxi }}
+         </div>
            <p>{{ course.content }}</p>
          </div>
-   <!-- Find School url -->
-           {% assign schools = site.schools | where: 'title' , course.school %}
-           {% for school in schools %}
-            <div class="cards-school">
-             <div class="cards-subtitle"><a href="{{ school.url }}">{{ school.title }}</a></div>
-               </div>
-           {% endfor %} 
-      <div class="cards-categories">
-      {{ course.categories}} , {{ course.age}}, {{ course.level}}
+      <div class="cards-school-categories">
+                <div class="cards-school">
+                <div class="cards-subtitle"><a href="{{ site.baseurl}}/{{ schoolUrl }}">{{ schoolTitle }}</a></div>
+                  </div>   
+      <!--   Categories -->
+         <div class="cards-categories">
+         {{ course.categories}} , {{ course.age}}, {{ course.level}}
+            </div>
          </div>
       </div>      
-    {% endfor %}   
+    {% endfor %} 
+<!--   for listjs     </ul> -->
 </div>
 
