@@ -9,9 +9,12 @@
 <!--    Menu -->
      <div class="menu-categories">
         <ul>
-           <li id="filter-none">Όλα</li>
-           {% for menu in site.data.categories %}            
-               <li id="filter-{{menu.name}}"><a href="{{site.baseurl}}/categories/{{menu.name}}">{{menu.gr}}</a></li>
+           {% for menu in site.data.categories %}
+           {% if menu.name == "none" %}
+              <li><a href="{{site.baseurl}}">{{menu.gr}}</a></li>
+           {% else %}
+               <li><a href="{{site.baseurl}}/categories/{{menu.name}}">{{menu.gr}}</a></li>
+           {% endif %}
              {% endfor %}
           </ul>
         </div>

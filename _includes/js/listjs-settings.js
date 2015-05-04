@@ -5,16 +5,18 @@ var options = {
 
 var coursesList = new List('courses', options);
 
-var noItems = $('<li id="no-items-found">No items found</li>');
+// No Results
+var noResults = $('<li id="no-items-found">Δε βρέθηκαν αποτελέσματα</li>');
 
 coursesList.on('updated', function(list) {
   if (list.matchingItems.length == 0) {
-    $(list.list).append(noItems);
+    $(list.list).append(noResults);
   } else {
-    noItems.detach();
+    noResults.detach();
   }
 });
 
+// Search Bar
 var searchField = coursesList.helpers.getByClass(document, 'search', true);
 
 coursesList.helpers.events.bind(searchField, 'keyup', function(e) {
@@ -22,23 +24,3 @@ coursesList.helpers.events.bind(searchField, 'keyup', function(e) {
   coursesList.search(target.value);
  });
 
-// Filter for each category
-  {% for menu in site.data.categories %} 
-  
-     $('#filter-{{ menu.name }}').click(function() {
-     coursesList.filter(function(item) {
-       if (item.values().categories == "{{ menu.name }}") {
-         return true;
-       } else {
-         return false;
-       }
-     });
-     return false;
-   });
-   
- {% endfor %}
-
-$('#filter-none').click(function() {
-  coursesList.filter();
-  return false;
-});

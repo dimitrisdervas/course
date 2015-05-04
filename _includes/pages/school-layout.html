@@ -2,7 +2,7 @@
 
 <!-- School img -->
  <div class="School-img">
-      <img src="http://placehold.it/850x350" alt="">
+      <img src="http://placehold.it/1120x461" alt="">
    </div>
 <!-- School Title -->
 <h1>{{page.title}}</h1>
@@ -33,7 +33,11 @@
       <div class="cards-text">
    <!-- Course Title -->
            <div class="cards-title"><a href="{{ site.baseurl}}/{{ course.url }}">{{ course.title }}</a></div>
-           <p>{{ course.content }}</p>
+           <p>{{ course.content | split:"<!-- more -->" | first | strip_html | truncate:300 }}
+            {% if course.content | size > 300 %}
+               <strong>περισσότερα</strong>
+            {% endif %}
+         </p>
          </div>
       <div class="cards-school-categories">
       <!-- Find School url -->

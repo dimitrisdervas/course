@@ -10,6 +10,7 @@ $light-blue: #4280A6;
 $white: #ffffff;
 $light-red: #BD6E6E;
 $pink: #F21C7D;
+$red: #BB135F;
 /*  */
 /* Defaults Variables for colors*/
 /*  */
@@ -17,13 +18,14 @@ $pink: #F21C7D;
 $background-grey: $lighter-grey;
 $text-color: lighten( $black, 30%);
 /* Links */
-$a-color: $blue;
+$link-color: $red;
 $hover-color: $light-blue;
 /* Blocks */
 $border-color: $light-grey;
 /* Header */
 $header-bg: $white;
 $logo-link: $pink;
+$menu-link-hover: $black;
 $header-text: $white;
 /* Frontpage */
 $cards-bg: $white;
@@ -36,4 +38,3 @@ $block-bg: lighten( $black, 85%);
 $submit-bg: $blue;
 /* Footer */
 $footer-bg: $grey;
-$link-color: #234394;

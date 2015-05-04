@@ -17,9 +17,15 @@ header {
             display: inline;
             list-style: none;
             padding: 10px;
+            a {
+               color: $menu-link;
+            }
             &:hover {
                cursor: pointer;
                background: #ccc;
+               a {
+                  color: $menu-link-hover;
+               }
             }
          }
       }

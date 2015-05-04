@@ -2,13 +2,8 @@
 
    
 <!--  for listjs   copied from http://codepen.io/jamesbarnett/pen/kcwzq -->
-<!--    Masonry  with susy
-        <!-- Masonry gutter sizer-->
-<!--      <div class="cards-gutter"></div> -->
-     <!-- Masonry columnWidth sizer -->
-<!--      <div class="cards-column"></div> -->
  <ul class="list">  
-   {% for course in courses %}
+   {% for course in site.courses %}
 
 <!--  Variables -->
          <!-- Find School url -->
@@ -38,7 +33,7 @@
          <div class="cards-perioxi">
             {{ placePerioxi }}
          </div>
-           <p>{{ course.content | split:"<!-- more -->" | first | strip_html | truncate:300 }}
+         <p>{{ course.content | split:"<!-- more -->" | first | strip_html | truncate:300 }}
             {% if course.content | size > 300 %}
                <strong>περισσότερα</strong>
             {% endif %}
@@ -50,7 +45,7 @@
                   </div>   
       <!--   Categories -->
          <div class="cards-categories">
-            <span class="categories"><a href="{{site.baseurl}}/categories/{{ course.categories}}">{{ course.categories}}</a></span>,
+            <span><a class="categories" href="{{site.baseurl}}/categories/{{ course.categories}}">{{ course.categories}}</a></span>,
             <span class="age">{{ course.age }}</span>,
             <span class="level">{{ course.level }}</span>
             </div>

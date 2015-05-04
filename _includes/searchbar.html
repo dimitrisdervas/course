@@ -1,4 +1,9 @@
 <!--   Search Field -->
     <div class="search-field">
       <input type="text" class="search" placeholder="Search Courses" />
+       <div class="filter-terms">
+       {% for menu in site.data.categories %}            
+               <div class="hide filter-{{menu.name}}" data-category-name="{{menu.name}}">{{menu.gr}}</div>
+             {% endfor %}
+       </div>
         </div>   

@@ -1,5 +1,8 @@
+- name: none
+  gr: Όλα 
+
 - name: sports
   gr: Άθληση
 
-- name: martialarts
+- name: aikido
   gr: Πολεμικές τέχνες

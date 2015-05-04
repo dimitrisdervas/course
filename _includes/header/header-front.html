@@ -9,12 +9,12 @@
 <!--    Menu -->
      <div class="menu-categories">
         <ul>
-           <li id="filter-none">Όλα</li>
            {% for menu in site.data.categories %}            
-               <li id="filter-{{menu.name}}">{{menu.gr}}</li>
+               <li id="filter-{{menu.name}}" data-category-name="{{menu.name}}">{{menu.gr}}</li>
              {% endfor %}
           </ul>
         </div>
 
   </div>
 </header>
+

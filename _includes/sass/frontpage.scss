@@ -1,4 +1,5 @@
 $font-family-heading: Open sans, Helvetica, Arial, sans-serif;
+
 /* Cards frontpage */
 .cards {
    @include container;
@@ -6,20 +7,10 @@ $font-family-heading: Open sans, Helvetica, Arial, sans-serif;
    ul {
     @include container;
    }
-/*    Masonry
-   .cards-column {
-      width: span(4); 
-   }
-   .cards-gutter{
-      width: gutter();
-   } */
    li {
       list-style: none;
    }
    .cards-item {
-/*       Masonry
-      width: span(4);
-      margin-top: gutter(); */
       @include gallery ( 4 of 12);
       background: $cards-bg;
       border: 1px solid $border-color;
