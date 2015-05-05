@@ -8,15 +8,15 @@ days:
  - day: Δευτέρα
    time: 21.30-16.30
  - day: Τρίτη
-   time: o
+   time: '-'
  - day: Τετάρτη
-   time: o
+   time: '-'
  - day: Πέμπτη
    time: 21.30-16.30
  - day: Παρασκευή
-   time: o
+   time: '-'
  - day: Σάββατο
-   time: o
+   time: '-'
  - day: Κυριακή
    time: 21.30-16.30   
 ---

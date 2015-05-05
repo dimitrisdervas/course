@@ -1,6 +1,87 @@
 ---
 layout: default
-name: course
 ---
 
-{% include pages/course-layout.html %}
+{% include relations/course.html %}
+
+<!-- Course Title -->
+   <div class="page-title">{{page.title}}</div>
+
+<!-- Course img -->
+ <div class="course-img">
+      <img src="http://placehold.it/1120x461" alt="">
+   </div>
+
+<div class="content">
+
+   
+<!-- Description -->
+   <section class="course-description">
+   {{ page.content }}
+   </section>
+
+
+<!-- Program -->
+   <section class="course-program">
+         <div class="section-title ">Πρόγραμμα</div>
+         <div class="section-data">
+            <div class="program-days">
+                  {% for day in page.days %}
+               <div class="days">   
+                     <div class="day">{{ day.day }}</div>
+                  <div class="time">{{ day.time | replace: "&" , "</br>" }}</div>  
+                     </div>
+                  {% endfor %}
+               </div>
+         </div>
+      </section>
+
+
+      <section class="school"> 
+         <div class="section-title"><a href="{{ site.baseurl}}/{{ schoolUrl }}">{{ schoolTitle }}</a> </div>
+         <div class="section-data">
+               <div class="school-image"> 
+                  <img src="http://placehold.it/391x391" alt="">
+                  </div>
+               <div class="school-details">
+                  <a href="{{ site.baseurl}}/{{ schoolUrl }}">{{ schoolTitle }}</a>
+                  <div class="description">{{ schoolExcerpt }}</div>
+                  <div class="phone">{{ schoolPhone }}</div>
+               </div>
+            </div>
+         </section>
+   
+   <section class="place">
+       <div class="section-title">Διεύθυνση</div>
+      <div class="section-data">
+         <div id="map"></div>
+         <div class="place-title">
+         <h2>{{ placeTitle }}</h2>
+         </div>
+         <div class="place-address">{{ placeAddress }}</div>
+      </div>
+      </section>
+
+</div>
+<!-- Sidebar -->
+<!-- <div class="sidebar">
+   <div class="sidebar-school">
+      <h2><a href="{{ site.baseurl}}/{{ schoolUrl }}">{{ schoolTitle }}</a></h2>
+
+      <div class="phone">{{ schoolPhone }}</div>
+      </div>
+</div> -->
+<script>
+// create a map in the "map" div, set the view to a given place and zoom
+var map = L.map('map').setView([{{placeLat}}, {{placeLong}}], 17);
+
+// add an OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// add a marker in the given location, attach some popup content to it and open the popup
+L.marker([{{placeLat}}, {{placeLong}}]).addTo(map)
+    .bindPopup('{{page.title}} <br> {{ placeTitle }} ,{{ placeAddress }}')
+    .openPopup();
+</script>

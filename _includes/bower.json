@@ -29,7 +29,8 @@
     "sticky-footer": "https://github.com/cferdinandi/sticky-footer.git",
     "masonry": "~3.3.0",
     "imagesloaded": "~3.1.8",
-    "listjs": "~1.1.1"
+    "listjs": "~1.1.1",
+    "clusterize": "~0.4.1"
   },
   "devDependencies": {
     "sass-toolkit": "~2.9.0"

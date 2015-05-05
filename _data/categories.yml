@@ -3,6 +3,7 @@
 
 - name: sports
   gr: Άθληση
+  
 
-- name: aikido
-  gr: Πολεμικές τέχνες
+- name: music
+  gr: Μουσική

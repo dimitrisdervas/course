@@ -1,0 +1,12 @@
+- name: basket
+  gr: Μπασκετ 
+
+- name: football
+  gr: ποδοσφαιρο
+  
+
+- name: aikido
+  gr: aikido
+
+- name: judo
+  gr: judo

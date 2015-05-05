@@ -1,9 +1,17 @@
 <!--   Search Field -->
     <div class="search-field">
       <input type="text" class="search" placeholder="Search Courses" />
-       <div class="filter-terms">
-       {% for menu in site.data.categories %}            
-               <div class="hide filter-{{menu.name}}" data-category-name="{{menu.name}}">{{menu.gr}}</div>
-             {% endfor %}
-       </div>
+          <div class="filter-terms">
+             {% for menu in site.data.categories %}            
+                  <div class="hide filter-{{menu.name}}" data-category-name="{{menu.name}}">{{menu.gr}}</div>
+                {% endfor %}
+          </div>
+          <div class="filter-subterms">    
+               {% for menutop in site.data.categories %}            
+                  {% assign subcategories = site.data.[menutop.name] %}
+                  {% for menu in subcategories %}      
+                   <div class="hide filter-{{menu.name}}  menu-subcategories-item" data-category-name="{{menu.name}}">{{menu.gr}}</div>
+                  {% endfor %}
+               {% endfor %}
+              </div>
         </div>   

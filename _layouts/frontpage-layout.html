@@ -1,18 +1,22 @@
-<div id="courses" class="cards {{ course.categories}} {{ course.age}} {{ course.level}}">
+---
+layout: default
+---
+
+<div id="courses" class="cards">
 
    
 <!--  for listjs   copied from http://codepen.io/jamesbarnett/pen/kcwzq -->
- <ul class="list">  
+ <ul id="courses-ul" class="list">  
    {% for course in site.courses %}
 
 <!--  Variables -->
          <!-- Find School url -->
-              {% assign schools = site.schools | where: 'title' , course.school %}
+              {% assign schools = site.schools | where: 'adminTitle' , course.school %}
               {% for school in schools %}
                  {% capture  schoolTitle %}{{ school.title }}{% endcapture %}
                  {% capture  schoolUrl %}{{ school.url }}{% endcapture %}
          <!--    Find Place Perioxi -->
-                     {% assign places = site.places | where: 'admin', school.place %}
+                     {% assign places = site.places | where: 'adminTitle', school.place %}
                      {% for place in places %}
                         {% capture  placePerioxi %}{{ place.perioxi }}{% endcapture %}
                      {% endfor %}
@@ -46,6 +50,7 @@
       <!--   Categories -->
          <div class="cards-categories">
             <span><a class="categories" href="{{site.baseurl}}/categories/{{ course.categories}}">{{ course.categories}}</a></span>,
+            <span class="subcategory">{{ course.subcategory }}</span>,
             <span class="age">{{ course.age }}</span>,
             <span class="level">{{ course.level }}</span>
             </div>

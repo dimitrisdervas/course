@@ -49,5 +49,5 @@ defaults:
       path: "categories"
       type: "pages" # previously `page` in Jekyll 2.2.
     values:
-      layout: "default" # overrides previous default layout
+      layout: "categories-layout" # overrides previous default layout
       pagename: categories

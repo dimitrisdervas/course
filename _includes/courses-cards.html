@@ -12,12 +12,12 @@
 
 <!--  Variables -->
          <!-- Find School url -->
-              {% assign schools = site.schools | where: 'title' , course.school %}
+              {% assign schools = site.schools | where: 'adminTitle' , course.school %}
               {% for school in schools %}
                  {% capture  schoolTitle %}{{ school.title }}{% endcapture %}
                  {% capture  schoolUrl %}{{ school.url }}{% endcapture %}
          <!--    Find Place Perioxi -->
-                     {% assign places = site.places | where: 'admin', school.place %}
+                     {% assign places = site.places | where: 'adminTitle', school.place %}
                      {% for place in places %}
                         {% capture  placePerioxi %}{{ place.perioxi }}{% endcapture %}
                      {% endfor %}

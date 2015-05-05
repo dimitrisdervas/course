@@ -1,0 +1,13 @@
+.course-program {
+   /* Program Days */
+   .days {
+      @include gallery ( 2 of 14 );
+   }
+   .days {
+      text-align: center;
+      border-right: 1px solid $border-color;
+      .day {
+         font-weight: bold;
+      }
+   }
+}

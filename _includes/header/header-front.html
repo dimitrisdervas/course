@@ -10,11 +10,21 @@
      <div class="menu-categories">
         <ul>
            {% for menu in site.data.categories %}            
-               <li id="filter-{{menu.name}}" data-category-name="{{menu.name}}">{{menu.gr}}</li>
+               <li id="filter-{{menu.name}}" data-category-name="{{menu.name}}">{{menu.gr}}</li>  
              {% endfor %}
           </ul>
         </div>
-
-  </div>
+<!--      Menu Subcategories -->
+   <div class="menu-subcategories">
+      <ul>     
+         {% for menutop in site.data.categories %}            
+            {% assign subcategories = site.data.[menutop.name] %}
+            {% for menu in subcategories %}      
+               <li id="filter-{{menu.name}}" class="hide filter-{{menutop.name}}  menu-subcategories-item" data-category-name="{{menutop.name}}" data-subcategory-name="{{menu.name}}">{{menu.gr}}</li>
+            {% endfor %}
+         {% endfor %}
+         </ul>
+        </div>
+     </div>
 </header>
 

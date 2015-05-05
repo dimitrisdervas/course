@@ -1,6 +1,63 @@
 ---
 layout: default
-name: school
 ---
 
-{% include pages/school-layout.html %}
+{% include relations/school.html %}
+
+<!-- School img -->
+ <div class="School-img">
+      <img src="http://placehold.it/1120x461" alt="">
+   </div>
+<!-- School Title -->
+<h1>{{page.title}}</h1>
+
+
+<p>{{page.content}}</p>
+<h2>Επικοινωνία</h2>
+<h4>{{page.phone}}</h4>
+
+<!-- Courses -->
+<section class="section-courses">
+ <h3>Τμήματα</h3> 
+   
+ {% assign courses = site.courses | where: 'school', page.adminTitle | group_by: 'subcategory' | sort: 'title' | %}   
+ <div id="courses" class="school-courses">
+
+    <ul class="courses-list">  
+         {% for group in courses %}
+       <li class="school-course-title">       
+          <div class="group-title">{{ group.name }}</div>
+           {% assign items = group.items %}
+           {% for item in items limit:1 %}
+          <div class="program-days">
+             {% for day in item.days %}
+             <div class="days"> 
+                <div class="day">{{ day.day }}</div>
+             </div>
+             {% endfor %}
+          </div>
+                {% endfor %}
+<!--           Course Details -->
+          
+             {% for item in items  %}
+               
+                  <li class="course-program"> 
+                     <div class="age">{{ item.age }}</div>
+<!--                      Program -->
+                        <div class="program-times">
+                                 {% for day in item.days %}
+                           <div class="times"> 
+                                       <div class="time">{{ day.time | replace: "&" , "</br>" }}</div>  
+                           </div>
+                                 {% endfor %}
+                        </div>
+                      </li>
+                 {% endfor %}
+          </li>
+       {% endfor %}
+
+     </ul>
+</div>
+</section>
+
+

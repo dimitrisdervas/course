@@ -1,8 +1,8 @@
 ---
-title: 11gymnasio
-admin: 11gymnasio
-address: Φαναρίου 23
-perioxi: Καλαμαριά
+title: Dojo
+adminTitle: dojo
+address: 18ης Νοέμβρη 21
+perioxi: Τούμπα
 lat: 59.342457
 long: 18.057340
 ---   

@@ -66,6 +66,7 @@ header {
 }
 /* Course layout - Content sidebar */
 section {
+   @include container;
    margin-bottom: 4rem;
 }
 .course-program {
