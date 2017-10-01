@@ -1,0 +1,22 @@
+---
+pages:
+- categories/sports.md
+- categories/martialarts.md
+- categories/arts.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: categories-layout
+- name: pagename
+  label: Pagename
+  type: text
+  hidden: false
+  default: categories
