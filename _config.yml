@@ -19,7 +19,7 @@ permalink: pretty
 
 sass:
     sass_dir: /_includes
-  
+
 collections:
   courses:
     output: true
@@ -27,7 +27,7 @@ collections:
     output: true
   places:
     output: true
-  
+
 defaults:
  -
     scope:
@@ -51,3 +51,79 @@ defaults:
     values:
       layout: "categories-layout" # overrides previous default layout
       pagename: categories
+
+page_gen:
+  - data: 'courses'
+    template: 'airtable/course'
+    name: 'id'
+    dir: 'courses-airtable'
+
+
+# jekyll_get:
+#   - data: places
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Place?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: syllogos
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Syllogos?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: schools
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Schools?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: courses
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Courses?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: instructors
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Instructor?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: categories
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Categories?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: subcategories
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Subcategoriess?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: level
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Level?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: age
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Age?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+
+## CLOUDCANNON
+ages: 
+  - adults
+  - kids
+  - teens
+  - baby
+
+categories: 
+  - Χορός
+  - Πολεμικές τέχνες
+  - Μουσική
+  - Αθλητισμός
+
+subcategories: 
+  - Basket
+  - Volley
+  - Judo
+  - Ποδόσφαιρο
+  - Κιθάρα
+  - Βιολί
+  - Karate
+  - Ju-Jitsu
+  - Kobudo
+  - Aikido
+  - Capoeira
+  - Ενόργανη
+  - Μουσική Προπαιδεία
+  - Κολύμβηση
+  - Τένις
+  - Παραδοσιακοί Χοροί
+  - Μοντέρνος Χορός
+  - Handball
+
+levels: 
+  - novice
+  - intermediate
+  - advanced
+  - baby
+  - all levels

@@ -2,6 +2,7 @@
 title: Aikido for adults
 school: tenchikan
 categories: sports
+subcategories: 'Aikido'
 age: adults
 level: intermediate
 days:
