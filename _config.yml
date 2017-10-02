@@ -27,6 +27,12 @@ collections:
     output: true
   places:
     output: true
+  age-categories:
+    output: true
+  subcategories:
+    output: true
+  levels:
+    output: true
 
 defaults:
  -
@@ -52,11 +58,11 @@ defaults:
       layout: "categories-layout" # overrides previous default layout
       pagename: categories
 
-page_gen:
-  - data: 'courses'
-    template: 'airtable/course'
-    name: 'id'
-    dir: 'courses-airtable'
+# page_gen:
+#   - data: 'courses'
+#     template: 'airtable/course'
+#     name: 'id'
+#     dir: 'courses-airtable'
 
 
 # jekyll_get:

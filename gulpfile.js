@@ -85,12 +85,12 @@ gulp.task('subcategories', function() {
 
 });
 
-gulp.task('age-categories', function() {
+gulp.task('agecategories', function() {
 
     var config = {
-    collection: '_age-categories',
-    csv       : '_data/csv/age-categories',
-    template  : '_gulp-templates/age-categories.hbs'
+    collection: '_agecategories',
+    csv       : '_data/csv/agecategories',
+    template  : '_gulp-templates/agecategories.hbs'
 };
 
     fs.readFile('./'+config.csv+'.csv', 'utf8', function(err, data){

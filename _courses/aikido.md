@@ -4,6 +4,7 @@ school: tenchikan
 category: 
 subcategories: 
 ages: adults
+agecategories:
 levels: intermediate
 
 ---
