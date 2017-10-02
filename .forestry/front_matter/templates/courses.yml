@@ -1,0 +1,111 @@
+---
+pages:
+- _courses/xanth/taekwondo/xanth--pingpong_g03.md
+- _courses/xanth/taekwondo/xanth--pingpong_g02.md
+- _courses/xanth/taekwondo/xanth--pingpong_g01.md
+- _courses/xanth/swimming/xanth--swim_g03.md
+- _courses/xanth/swimming/xanth--swim_g02.md
+- _courses/xanth/swimming/xanth--swim_g01.md
+- _courses/xanth/polo/xanth--polo_g01.md
+- _courses/xanth/ping-pong/xanth--pingpong_g03.md
+- _courses/xanth/ping-pong/xanth--pingpong_g02.md
+- _courses/xanth/ping-pong/xanth--pingpong_g01.md
+- _courses/xanth/judo/xanth--judo_g03.md
+- _courses/xanth/judo/xanth--judo_g02.md
+- _courses/xanth/judo/xanth--judo_g01.md
+- _courses/xanth/football/xanth--football_g04.md
+- _courses/xanth/football/xanth--football_g03.md
+- _courses/xanth/football/xanth--football_g02.md
+- _courses/xanth/football/xanth--football_g01.md
+- _courses/xanth/basket/xanth--basket__g10.md
+- _courses/xanth/basket/xanth--basket__g09.md
+- _courses/xanth/basket/xanth--basket__g08.md
+- _courses/xanth/basket/xanth--basket__g07.md
+- _courses/xanth/basket/xanth--basket__g06.md
+- _courses/xanth/basket/xanth--basket__g05.md
+- _courses/xanth/basket/xanth--basket__g04.md
+- _courses/xanth/basket/xanth--basket__g03.md
+- _courses/xanth/basket/xanth--basket__g02.md
+- _courses/xanth/basket/xanth--basket__g01.md
+- _courses/kobudo.md
+- _courses/karate-suibukan.md
+- _courses/capoeira.md
+- _courses/aikido.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: school
+  label: School
+  type: text
+  hidden: false
+  default: ''
+- name: categories
+  label: Categories
+  type: tag_list
+  hidden: false
+  default: ''
+- name: subcategories
+  label: Subcategories
+  type: text
+  hidden: false
+  default: ''
+- name: age
+  label: Age
+  type: text
+  hidden: false
+  default: ''
+- name: level
+  label: Level
+  type: text
+  hidden: false
+  default: ''
+- name: days
+  label: Days
+  type: field_group_list
+  fields:
+  - name: day
+    label: Day
+    type: text
+    hidden: false
+    default: ''
+  - name: time
+    label: Time
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: subcategory
+  label: Subcategory
+  type: text
+  hidden: false
+  default: ''
+- name: rensponsible
+  label: Rensponsible
+  type: text
+  hidden: false
+  default: ''
+- name: tel-rensponsible
+  label: Tel rensponsible
+  type: text
+  hidden: false
+  default: ''
+- name: place
+  label: Place
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: course-layout
