@@ -5,7 +5,10 @@ categories: sports
 subcategory: football 
 rensponsible: Παυλούδης Θανάσης
 tel-rensponsible: 6986169961 
-age: kids(10-11)
+age: 
+ - 10 
+ - 11
+age_category: kids
 level: novice
 days:
  - day: Δευτέρα
@@ -19,9 +22,9 @@ days:
  - day: Παρασκευή
    time: 19:00 - 20:00
  - day: Σάββατο
-   time: '-'
+   time: 
  - day: Κυριακή
-   time: '-'
+   time: 
 ---
 
 Α κύκλος : Δευτέρα ,Τετάρτη,Παρασκευή
