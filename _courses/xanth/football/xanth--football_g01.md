@@ -9,19 +9,26 @@ age: kids(4-7)
 level: novice
 days:
  - day: Δευτέρα
-   time: 17:00 -18:00
+   from_time: 17:00
+   to_time: 18:00
  - day: Τρίτη
-   time: 18:00-19:00
+   from_time: 18:00
+   to_time: 19:00
  - day: Τετάρτη
-   time: 17:00 -18:00
+   from_time: 18:00
+   to_time: 19:00
  - day: Πέμπτη
-   time: 18:00-19:00
+   from_time: 18:00
+   to_time: 19:00
  - day: Παρασκευή
-   time: 17:00 -18:00
+   from_time: 18:00
+   to_time: 19:00
  - day: Σάββατο
-   time: '-'
+   from_time:
+   to_time:
  - day: Κυριακή
-   time: '-'
+   from_time:
+   to_time:
 ---
 
 Α κύκλος : Δευτέρα ,Τετάρτη,Παρασκευή
