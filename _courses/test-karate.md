@@ -1,14 +1,15 @@
 ---
 title: test karate
-school:
-category:
-subcategory:
+school: school--suibukan
+category: Αθλητισμός
+subcategory: Karate
 rensponsible:
 tel-rensponsible:
 instructor:
 ages:
 age_categories:
-levels: novice
+levels:
+  - all levels
 days:
   - day: Δευτέρα
     from_time:
@@ -32,3 +33,5 @@ days:
     from_time:
     to_time:
 ---
+
+
