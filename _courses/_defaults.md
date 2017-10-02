@@ -1,14 +1,14 @@
 ---
 title: 
 school: 
-categories: 
+category: 
 subcategory: 
 rensponsible: 
 tel-rensponsible: 
 instructor:
 ages: 
 age_categories: 
-level: novice
+levels: novice
 days:
  - day: Δευτέρα
    from_time: 

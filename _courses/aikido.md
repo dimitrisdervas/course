@@ -1,25 +1,11 @@
 ---
 title: Aikido for adults
 school: tenchikan
-category: sports
-subcategory: 'Aikido'
-age: adults
-level: intermediate
-days:
- - day: Δευτέρα
-   time: 21.30-16.30
- - day: Τρίτη
-   time: 22.30-19.30
- - day: Τετάρτη
-   time: 21.30-16.30
- - day: Πέμπτη
-   time: 21.30-16.30
- - day: Παρασκευή
-   time: 22.30-19.30
- - day: Σάββατο
-   time: 21.30-16.30   
- - day: Κυριακή
-   time: 21.30-16.30   
+category: 
+subcategories: 
+ages: adults
+levels: intermediate
+
 ---
 
 

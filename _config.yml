@@ -89,13 +89,7 @@ page_gen:
 #     cache: true
 
 ## CLOUDCANNON
-age_categories: 
-  - adults (18+)
-  - children (6-11)
-  - teens (12-18)
-  - kids(3-6)
-  - baby (1-3)
- 
+
 ages:
   - 1
   - 2
@@ -117,39 +111,12 @@ ages:
   - 18
   - '18+'
 
-
 categories: 
   - Χορός
   - Πολεμικές τέχνες
   - Μουσική
   - Αθλητισμός
 
-subcategories: 
-  - Basket
-  - Volley
-  - Judo
-  - Ποδόσφαιρο
-  - Κιθάρα
-  - Βιολί
-  - Karate
-  - Ju-Jitsu
-  - Kobudo
-  - Aikido
-  - Capoeira
-  - Ενόργανη
-  - Μουσική Προπαιδεία
-  - Κολύμβηση
-  - Τένις
-  - Παραδοσιακοί Χοροί
-  - Μοντέρνος Χορός
-  - Handball
-
-level: 
-  - novice
-  - intermediate
-  - advanced
-  - baby
-  - all levels
 
 
 exclude: ["_gulp-templates",
