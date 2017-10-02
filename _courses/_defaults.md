@@ -2,7 +2,7 @@
 title: 
 school: 
 category: 
-subcategory: 
+subcategories: 
 rensponsible: 
 tel-rensponsible: 
 instructor:
