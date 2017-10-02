@@ -7,7 +7,7 @@ rensponsible:
 tel-rensponsible: 
 instructor:
 ages: 
-age_categories: 
+age-categories: 
 levels: novice
 days:
  - day: Δευτέρα
