@@ -115,3 +115,63 @@ gulp.task('agecategories', function() {
       });
 
 });
+
+gulp.task('cities', function() {
+
+    var config = {
+    collection: '_cities',
+    csv       : '_data/csv/cities',
+    template  : '_gulp-templates/cities.hbs'
+};
+
+    fs.readFile('./'+config.csv+'.csv', 'utf8', function(err, data){
+        if (err) throw err;
+
+        parsed = Papa.parse(data,{delimiter: ',',   newline: ''});
+        rows = parsed.data;
+
+        for(var i = 1; i < rows.length; i++) {
+            var items = rows[i];
+
+            var templateData = {
+                title: items[0]
+            };
+            gulp.src(config.template)
+                .pipe(handlebars(templateData))
+                .pipe(rename(config.collection+'/'+items[1]+'.md'))
+                .pipe(gulp.dest('.'));
+            }
+      });
+
+});
+// gulp.task('airtable', function() {
+
+//     var config = {
+//     collection: '_airtable',
+//     csv       : '_data/age',
+//     template  : '_gulp-templates/age.hbs'
+// };
+
+//     fs.readFile('./'+config.csv+'.csv', 'utf8', function(err, data){
+//         if (err) throw err;
+        
+// Papa.unparse(data[, config])
+//         parsed = Papa.parse(data,{delimiter: ',',   newline: ''});
+//         rows = parsed.data;
+
+//         for(var i = 1; i < rows.length; i++) {
+//             var items = rows[i];
+
+//             var templateData = {
+//                 title: items[0],
+//                 ages: items[1],
+//                 slug: items[2]
+//             };
+//             gulp.src(config.template)
+//                 .pipe(handlebars(templateData))
+//                 .pipe(rename(config.collection+'/'+items[2]+'.md'))
+//                 .pipe(gulp.dest('.'));
+//             }
+//       });
+
+// });

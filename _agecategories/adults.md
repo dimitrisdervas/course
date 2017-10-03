@@ -1,6 +1,5 @@
 ---
-title: adults (18+)
+title-plus: adults (18+)
 ages: []
-title-admin: adults
-layout: categories-layout
+title: adults
 ---

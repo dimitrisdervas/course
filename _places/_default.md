@@ -1,0 +1,10 @@
+---
+title: 
+slug:
+address:
+city: 
+tk:
+perioxi: 
+lat: 
+long: 
+---

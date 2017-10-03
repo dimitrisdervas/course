@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<h1>Category: {{page.title}}</h1>
+
+{% assign courses = site.courses | where: 'agecategories' , page.slug %}
+
+{% include courses-cards.html %}

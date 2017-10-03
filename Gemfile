@@ -11,4 +11,5 @@ gem 'jekyll'
 group :jekyll_plugins do
 	gem 'hash-joiner', '~> 0.0.7'
 	gem 'json'
+	gem 'jekyll-admin'
 end

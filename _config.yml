@@ -27,7 +27,7 @@ collections:
     output: true
   places:
     output: true
-  age-categories:
+  agecategories:
     output: true
   subcategories:
     output: true
@@ -57,7 +57,24 @@ defaults:
     values:
       layout: "categories-layout" # overrides previous default layout
       pagename: categories
+ -
+    scope:
+      type: "levels"
+    values:
+     layout: "levels-layout"
+ -
+    scope:
+      type: "subcategories"
+    values:
+     layout: "subcategories-layout"
+ -
+    scope:
+      type: "agecategories"
+    values:
+     layout: "agecategories-layout"
+     permalink: /agecategories/:slug
 
+     
 # page_gen:
 #   - data: 'courses'
 #     template: 'airtable/course'
@@ -115,7 +132,6 @@ ages:
   - 16
   - 17
   - 18
-  - '18+'
 
 categories: 
   - Χορός

@@ -50,11 +50,13 @@
                   </div>   
       <!--   Categories -->
          <div class="cards-categories">
-            <span class="categories"><a href="{{site.baseurl}}/categories/{{ course.categories}}">{{ course.categories}}</a></span>,
-            <span class="age">{{ course.age }}</span>,
-            <span class="level">{{ course.level }}</span>
+            <span><a class="categories" href="{{site.baseurl}}/categories/{{ course.categories}}">{{ course.categories}}</a></span>,
+            <span class="subcategory"><a href="{{site.baseurl}}/subcategories/{{ course.subcategories }}">{{ course.subcategories }}</a></span>,
+            <span class="age"><a href="{{site.baseurl}}/agecategories/{{ course.agecategories }}">{{ course.agecategories }}</a></span>,
+            <span class="level"><a href="{{site.baseurl}}/levels/{{ course.levels }}">{{ course.levels }}</a></span>
             </div>
          </div>
+      </li>
       </li>      
     {% endfor %} 
   </ul>

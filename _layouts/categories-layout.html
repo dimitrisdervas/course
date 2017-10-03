@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<h1>Category: {{page.title}}</h1>
+
 {% assign courses = site.courses | where: 'categories' , page.title %}
 
 {% include courses-cards.html %}
