@@ -30,6 +30,11 @@ video {
 header {
     @include full;
 }
+.filter-wrapper {
+    @include container;
+   @include break;
+   width: 100%;
+}
 .search-field {
    @include container;
    @include break;

@@ -24,3 +24,21 @@ coursesList.helpers.events.bind(searchField, 'keyup', function(e) {
   coursesList.search(target.value);
  });
 
+ //filter
+    $('.filter').change(function() {
+        var bool = this.checked;
+        var value = $(this).data("value");
+
+        coursesList.filter(function (item) {
+            if (item.values().age == value && bool == true) {
+                return true;
+            } else if (coursesList.filtered && bool == false) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        return false;
+
+     });

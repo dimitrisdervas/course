@@ -1,5 +1,7 @@
 ---
 title: Handball
-title-admin: handball
-
+slug: handball
+courses: [handball]
+schools: []
+categories: [Αθλητισμός]
 ---

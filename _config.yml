@@ -27,6 +27,8 @@ collections:
     output: true
   places:
     output: true
+  categories:
+    output: true
   agecategories:
     output: true
   subcategories:
@@ -53,10 +55,10 @@ defaults:
  -
     scope:
       path: "categories"
-      type: "pages" # previously `page` in Jekyll 2.2.
+      type: "pages"
     values:
-      layout: "categories-layout" # overrides previous default layout
-      pagename: categories
+      layout: "categories-layout"
+      permalink: /categories/:slug
  -
     scope:
       type: "levels"
@@ -67,6 +69,7 @@ defaults:
       type: "subcategories"
     values:
      layout: "subcategories-layout"
+     permalink: /subcategories/:slug
  -
     scope:
       type: "agecategories"

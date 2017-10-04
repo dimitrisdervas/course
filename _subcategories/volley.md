@@ -1,5 +1,7 @@
 ---
 title: Volley
-title-admin: volley
-
+slug: volley
+courses: [Volley Βεργίνα]
+schools: []
+categories: [Αθλητισμός]
 ---

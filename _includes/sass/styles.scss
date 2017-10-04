@@ -45,6 +45,37 @@ ul {
 .footer-wrapper {
    background: $footer-bg;
 }
+.filter-wrapper {
+  margin-bottom: 40px;
+  .left {
+      @include span( 6 of 12);
+  }
+  .right {
+      @include span( 6 of 12 last);
+  }
+     .menu-categories {
+      background: #fff;
+      ul {
+        margin: 0;
+         li {
+            float: left;
+            display: inline;
+            list-style: none;
+            padding: 10px;
+            a {
+               color: $menu-link;
+            }
+            &:hover {
+               cursor: pointer;
+               background: #ccc;
+               a {
+                  color: $menu-link-hover;
+               }
+            }
+         }
+      }
+   }
+}
 /* SearchBar */
 .search-field {
      input[type="text"] {

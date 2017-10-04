@@ -4,6 +4,6 @@ layout: default
 
 <h1>Category: {{page.title}}</h1>
 
-{% assign courses = site.courses | where: 'subcategories' , page.title-admin %}
+{% assign courses = site.courses | where: 'subcategories' , page.title %}
 
 {% include courses-cards.html %}

@@ -1,5 +1,7 @@
 ---
 title: Τένις
-title-admin: tenis
-
+slug: tenis
+courses: []
+schools: []
+categories: [Αθλητισμός]
 ---

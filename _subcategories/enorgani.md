@@ -1,5 +1,7 @@
 ---
 title: Ενόργανη
-title-admin: enorgani
-
+slug: enorgani
+courses: []
+schools: []
+categories: [Αθλητισμός]
 ---

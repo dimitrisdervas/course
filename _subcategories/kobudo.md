@@ -1,5 +1,7 @@
 ---
 title: Kobudo
-title-admin: kobudo
-
+slug: kobudo
+courses: [Kobudo]
+schools: []
+categories: [Πολεμικές τέχνες]
 ---

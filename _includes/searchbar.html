@@ -1,3 +1,22 @@
+   <div class="filter-wrapper">
+ <!-- LEVELS -->
+     <div class="filter-categories left">
+        <ul>
+           {% for menu in site.levels %}            
+               <li id="filter-{{menu.slug}}" data-category-name="{{menu.slug}}">{{menu.title}}
+               </li>  
+             {% endfor %}
+          </ul>
+        </div>
+<!-- Agecategories -->
+             <div class="filter-categories right">
+        <ul>
+           {% for menu in site.agecategories %}            
+               <li id="filter-{{menu.slug}}" data-category-name="{{menu.slug}}">{{menu.title}}</li>  
+             {% endfor %}
+          </ul>
+        </div>
+</div>
 <!--   Search Field -->
     <div class="search-field">
       <input type="text" class="search" placeholder="Search Courses" />

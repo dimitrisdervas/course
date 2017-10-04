@@ -11,12 +11,12 @@ layout: default
 
 <!--  Variables -->
          <!-- Find School url -->
-              {% assign schools = site.schools | where: 'adminTitle' , course.school %}
+              {% assign schools = site.schools | where: 'title' , course.school %}
               {% for school in schools %}
                  {% capture  schoolTitle %}{{ school.title }}{% endcapture %}
                  {% capture  schoolUrl %}{{ school.url }}{% endcapture %}
          <!--    Find Place Perioxi -->
-                     {% assign places = site.places | where: 'adminTitle', school.place %}
+                     {% assign places = site.places | where: 'title', school.place %}
                      {% for place in places %}
                         {% capture  placePerioxi %}{{ place.perioxi }}{% endcapture %}
                      {% endfor %}
@@ -35,7 +35,7 @@ layout: default
               <a class="cardstitle" href="{{ site.baseurl}}/{{ course.url }}">{{ course.title }}</a>
          </div>
          <div class="cards-perioxi">
-            {{ placePerioxi }}
+            {{course.city}}-{{ placePerioxi }}
          </div>
          <p>{{ course.content | split:"<!-- more -->" | first | strip_html | truncate:300 }}
             {% if course.content | size > 300 %}
@@ -49,10 +49,10 @@ layout: default
                   </div>   
       <!--   Categories -->
          <div class="cards-categories">
-            <span><a class="categories" href="{{site.baseurl}}/categories/{{ course.categories}}">{{ course.categories}}</a></span>,
-            <span class="subcategory"><a href="{{site.baseurl}}/subcategories/{{ course.subcategories }}">{{ course.subcategories }}</a></span>,
-            <span class="age"><a href="{{site.baseurl}}/agecategories/{{ course.agecategories }}">{{ course.agecategories }}</a></span>,
-            <span class="level"><a href="{{site.baseurl}}/levels/{{ course.levels }}">{{ course.levels }}</a></span>
+            <span><a class="categories" href="{{site.baseurl}}/categories/{{ course.categories }}">{{ course.categories}}</a></span>,
+            <span ><a class="subcategory" href="{{site.baseurl}}/subcategories/{{ course.subcategories | | slugify }}">{{ course.subcategories }}</a></span>,
+            <span ><a class="age" href="{{site.baseurl}}/agecategories/{{ course.agecategories }}">{{ course.agecategories }}</a></span>,
+            <span ><a class="level" href="{{site.baseurl}}/levels/{{ course.levels }}">{{ course.levels }}</a></span>
             </div>
          </div>
       </li>      

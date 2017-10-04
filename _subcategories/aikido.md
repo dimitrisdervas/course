@@ -1,5 +1,7 @@
 ---
 title: Aikido
-title-admin: aikido
-
+slug: aikido
+courses: [Aikido ]
+schools: []
+categories: [Πολεμικές τέχνες]
 ---

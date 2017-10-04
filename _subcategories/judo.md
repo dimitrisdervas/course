@@ -1,5 +1,7 @@
 ---
 title: Judo
-title-admin: judo
-
+slug: judo
+courses: []
+schools: []
+categories: [Πολεμικές τέχνες]
 ---

@@ -9,11 +9,11 @@
 <!--    Menu - Categories -->
      <div class="menu-categories">
         <ul>
-           {% for menu in site.data.categories %}
+           {% for menu in site.categories %}
            {% if menu.name == "none" %}
-              <li><a href="{{site.baseurl}}">{{menu.gr}}</a></li>
+              <li><a href="{{site.baseurl}}">{{menu.title}}</a></li>
            {% else %}
-               <li><a href="{{site.baseurl}}/categories/{{menu.name}}">{{menu.gr}}</a></li>
+               <li><a href="{{site.baseurl}}/categories/{{menu.slug}}">{{menu.title}}</a></li>
            {% endif %}
              {% endfor %}
           </ul>

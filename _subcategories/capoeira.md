@@ -1,5 +1,7 @@
 ---
 title: Capoeira
-title-admin: capoeira
-
+slug: capoeira
+courses: []
+schools: []
+categories: [Πολεμικές τέχνες]
 ---
