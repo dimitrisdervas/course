@@ -5,9 +5,9 @@ layout: default
 {% include relations/school.html %}
 
 <!-- School img -->
- <div class="School-img">
+<!--  <div class="School-img">
       <img src="http://placehold.it/1120x461" alt="">
-   </div>
+   </div> -->
 <!-- School Title -->
 <h1>{{page.title}}</h1>
 
@@ -18,10 +18,8 @@ layout: default
 
 <!-- Courses -->
 <section class="section-courses">
- <h3>Τμήματα</h3> 
-   
- {% assign courses = site.courses | where: 'school', page.title | group_by: 'subcategories' | sort: 'title' | %}   
 
+{% assign courses = site.courses | where: 'school', page.title | group_by: 'subcategories' | sort: 'title'  %}
 
  <div id="courses" class="school-courses">
 
@@ -63,6 +61,31 @@ layout: default
 
      </ul>
 </div>
+<div id="map"></div>
 </section>
+{% for places in page.places limit: 1 %}
+      {% assign placeone = site.places | where: 'title', places %}
+      {% for place in placeone %}
+      {% capture  placeTitle %}{{ place.title }}{% endcapture %}
+      {% capture  placeUrl %}{{ place.url }}{% endcapture %}   
+      {% capture  placeAddress %}{{ place.address }}{% endcapture %}
+      {% capture  placePerioxi %}{{ place.perioxi }}{% endcapture %}
+      {% capture  placeLat %}{{ place.latitude }}{% endcapture %}
+      {% capture  placeLong %}{{ place.longitude }}{% endcapture %}
+      {% endfor %}
+{% endfor %}
 
+<script>
+// create a map in the "map" div, set the view to a given place and zoom
+var map = L.map('map').setView([{{placeLat}}, {{placeLong}}], 17);
 
+// add an OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// add a marker in the given location, attach some popup content to it and open the popup
+L.marker([{{placeLat}}, {{placeLong}}]).addTo(map)
+    .bindPopup('{{page.title}} <br>,{{ page.address }}')
+    .openPopup();
+</script>

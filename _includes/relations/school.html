@@ -1,7 +1,10 @@
-
   <!-- Place -->
-      {% assign places = site.places | where: 'admin', page.place %}
+      {% assign places = site.places | where: 'title', page.places %}
       {% for place in places %}
-         {% capture  placeTitle %}{{ place.title }}{% endcapture %}
-         {% capture  placeUrl %}{{ place.url }}{% endcapture %}        
+	    {% capture  placeTitle %}{{ place.title }}{% endcapture %}
+	    {% capture  placeUrl %}{{ place.url }}{% endcapture %}   
+	    {% capture  placeAddress %}{{ place.address }}{% endcapture %}
+	    {% capture  placePerioxi %}{{ place.perioxi }}{% endcapture %}
+	    {% capture  placeLat %}{{ place.latitude }}{% endcapture %}
+	    {% capture  placeLong %}{{ place.longitude }}{% endcapture %}
       {% endfor %}

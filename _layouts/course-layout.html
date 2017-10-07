@@ -8,15 +8,16 @@ layout: default
    <div class="page-title">{{page.title}}</div>
 
 <!-- Course img -->
- <div class="course-img">
+<!--  <div class="course-img">
       <img src="http://placehold.it/1120x461" alt="">
-   </div>
+   </div> -->
 
 <div class="content">
 
-   
 <!-- Description -->
    <section class="course-description">
+<div class="ages">{{ page.ages}}</div>
+
    {{ page.content }}
    </section>
 
@@ -56,7 +57,7 @@ layout: default
       <div class="section-data">
          <div id="map"></div>
          <div class="place-title">
-         <h2>{{ placeTitle }}</h2>
+         <h2><a href="{{site.baseurl}}/{{placeUrl}}">{{ placeTitle }}</a></h2>
          </div>
          <div class="place-address">{{ placeAddress }}</div>
       </div>

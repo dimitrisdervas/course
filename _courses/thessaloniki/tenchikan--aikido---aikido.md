@@ -1,8 +1,8 @@
 ---
-title: Aikido 
-school: Tenchikan
-place: DOJO
-city: Θεσσαλονίκη
+title: "Aikido "
+school: "Tenchikan"
+place: "DOJO"
+city: "Θεσσαλονίκη"
 category: Πολεμικές τέχνες
 subcategories: Aikido
 instructor: 
@@ -12,19 +12,19 @@ levels: novice
 practices: 2
 days:
  - day: Δευτέρα
-   time: 
+   time: ""
  - day: Τρίτη
-   time: 
+   time: ""
  - day: Τετάρτη
-   time: 18:30-20:30
+   time: "18:30-20:30"
  - day: Πέμπτη
-   time: 
+   time: ""
  - day: Παρασκευή
-   time: 
+   time: ""
  - day: Σάββατο
-   time: 
+   time: ""
  - day: Κυριακή
-   time: 18:30-20:30
+   time: "18:30-20:30"
 ---
 
 

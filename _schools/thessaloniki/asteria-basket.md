@@ -1,17 +1,18 @@
 ---
-title: Αστερια Basket
-city: Θεσσαλονίκη
-perioxi: Θέρμη
-category: Αθλητισμός
-subcategory: 
+title: "Αστερια Basket"
+city: "Θεσσαλονίκη"
+perioxi: "Θέρμη"
+categories: Αθλητισμός
+subcategories: [Basket]
 logo-img: 
-address: 
+address: ""
 phone: 
 email: 
 courses: []
-place: 
+places: []
 rensponsible-tel: 
-rensponsible: 
+rensponsibles: ""
+syllogoi: 
 ---
 
 

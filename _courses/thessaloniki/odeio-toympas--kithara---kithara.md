@@ -1,8 +1,8 @@
 ---
-title: Κιθάρα
-school: Ωδείο Τούμπας
-place: Ωδείο Τούμπας
-city: Θεσσαλονίκη
+title: "Κιθάρα"
+school: "Ωδείο Τούμπας"
+place: "Ωδείο Τούμπας"
+city: "Θεσσαλονίκη"
 category: Μουσική
 subcategories: Κιθάρα
 instructor: 
@@ -12,19 +12,19 @@ levels: All levels
 practices: 2
 days:
  - day: Δευτέρα
-   time: 
+   time: ""
  - day: Τρίτη
-   time: 
+   time: ""
  - day: Τετάρτη
-   time: 18:30-20:30
+   time: "18:30-20:30"
  - day: Πέμπτη
-   time: 
+   time: ""
  - day: Παρασκευή
-   time: 
+   time: ""
  - day: Σάββατο
-   time: 18:30-20:30
+   time: "18:30-20:30"
  - day: Κυριακή
-   time: 
+   time: ""
 ---
 
 

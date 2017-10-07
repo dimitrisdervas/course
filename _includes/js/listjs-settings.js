@@ -1,5 +1,5 @@
 var options = {
-  valueNames: [ 'categories' , 'age' , 'level', 'cardstitle', 'subcategory'],
+  valueNames: [ 'categories' , 'age' , 'level', 'cardstitle', 'subcategory', 'school'],
   searchClass: "search"
 };
 
@@ -23,22 +23,3 @@ coursesList.helpers.events.bind(searchField, 'keyup', function(e) {
   var target = e.target || e.srcElement; // IE have srcElement
   coursesList.search(target.value);
  });
-
- //filter
-    $('.filter').change(function() {
-        var bool = this.checked;
-        var value = $(this).data("value");
-
-        coursesList.filter(function (item) {
-            if (item.values().age == value && bool == true) {
-                return true;
-            } else if (coursesList.filtered && bool == false) {
-                return true;
-            } else {
-                return false;
-            }
-        });
-
-        return false;
-
-     });

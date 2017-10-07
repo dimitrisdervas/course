@@ -1,17 +1,18 @@
 ---
-title: ΧΑΝΘ
-city: Θεσσαλονίκη
-perioxi: Κέντρο
-category: Αθλητισμός
-subcategory: 
+title: "ΧΑΝΘ"
+city: "Θεσσαλονίκη"
+perioxi: "Κέντρο"
+categories: Αθλητισμός
+subcategories: [Ποδόσφαιρο,Volley,Handball,Judo]
 logo-img: 
-address: 
+address: ""
 phone: 
 email: 
 courses: [handball,PIVOT 2002-03-04,REBOUND 2005]
-place: ΧΑΝΘ
+places: [ΧΑΝΘ]
 rensponsible-tel: 
-rensponsible: 
+rensponsibles: "ΧΑΝΘ"
+syllogoi: 
 ---
 
 

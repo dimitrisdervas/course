@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<h1>Ηλικία: {{page.title}}</h1>
+
+{% assign courses = site.courses | where: 'ages' , page.title %}
+
+{% include courses-cards.html %}

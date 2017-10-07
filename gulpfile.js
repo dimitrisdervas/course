@@ -240,7 +240,8 @@ gulp.task('airsyllogos', function() {
                     phone: items[7],
                     facebook: items[8],
                     website: items[9],
-                    Rensponsible: items[10]
+                    Rensponsible: items[10],
+                    Syllogos: items[11]
             };
              var items5 = translit(items[5], {
                 lang: 'en'
@@ -292,8 +293,11 @@ gulp.task('airschool', function() {
                     Courses: items[10],
                     Place: items[11],
                     Rensponsibletel: items[12],
-                    Rensponsible: items[14]
+                    Rensponsible: items[13],
+                    Syllogos: items[14]
             };
+
+
              var items1 = translit(items[1], {
                 lang: 'en'
               })
@@ -434,6 +438,44 @@ gulp.task('airagecategories', function() {
                 .pipe(rename({  
                     dirname: config.collection+'/',
                     basename: items0,
+                    extname: ".md"}))
+                .pipe(gulp.dest('.'));
+            }
+      });
+});
+
+gulp.task('airage', function() {
+
+    var config = {
+    collection: '_ages',
+    csv       : '_data/airtable/Age-Grid view',
+    template  : '_gulp-templates/airtable/age.hbs'
+};
+
+    fs.readFile('./'+config.csv+'.csv', 'utf8', function(err, data){
+        if (err) throw err;
+
+        parsed = Papa.parse(data,{delimiter: ',',   newline: ''});
+        rows = parsed.data;
+
+        for(var i = 1; i < rows.length; i++) {
+            var items = rows[i];
+
+            var templateData = {
+                Year: items[0],
+                Agecategories: items[1],
+                Courses: items[2],
+                Dateofbirth: items[3],
+                Slug: items[4]
+            };
+
+            // https://gist.github.com/antonreshetov/c41a13cfb878a3101196c3a62de81778
+            gulp.src(config.template)
+                .pipe(handlebars(templateData))
+                .pipe(rename({  
+                    dirname: config.collection+'/',
+                    basename: items[4],
+                    prefix: 'age--',
                     extname: ".md"}))
                 .pipe(gulp.dest('.'));
             }

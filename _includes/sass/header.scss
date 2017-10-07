@@ -55,3 +55,34 @@ header {
       }
    }
 }   
+
+.header-age {
+   margin-bottom: 2em;
+   background: $header-bg;
+   .menu-age {
+      @include container;
+      display: flex;
+       justify-content: flex-start;
+       width: 100%;
+       align-items: center;
+      ul {
+
+         li {
+            float: left;
+            display: inline;
+            list-style: none;
+            padding: 10px;
+            a {
+               color: $menu-link;
+            }
+            &:hover {
+               cursor: pointer;
+               background: #ccc;
+               a {
+                  color: $menu-link-hover;
+               }
+            }
+         }
+      }
+   }
+}

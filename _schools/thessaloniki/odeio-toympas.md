@@ -1,17 +1,18 @@
 ---
-title: Ωδείο Τούμπας
-city: Θεσσαλονίκη
-perioxi: Τούμπα
-category: Μουσική
-subcategory: 
+title: "Ωδείο Τούμπας"
+city: "Θεσσαλονίκη"
+perioxi: "Τούμπα"
+categories: Μουσική
+subcategories: [Κιθάρα,Βιολί]
 logo-img: 
-address: 
+address: ""
 phone: 
 email: 
 courses: [Κιθάρα]
-place: 
+places: []
 rensponsible-tel: 
-rensponsible: 
+rensponsibles: ""
+syllogoi: 
 ---
 
 

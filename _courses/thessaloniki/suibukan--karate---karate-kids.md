@@ -1,8 +1,8 @@
 ---
-title: Karate Kids
-school: Suibukan
-place: 11 Δημοτικού Καλαμαριάς
-city: Θεσσαλονίκη
+title: "Karate Kids"
+school: "Suibukan"
+place: "11 Δημοτικού Καλαμαριάς"
+city: "Θεσσαλονίκη"
 category: Πολεμικές τέχνες
 subcategories: Karate
 instructor: Βλάχος Π.
@@ -12,19 +12,19 @@ levels: novice
 practices: 0
 days:
  - day: Δευτέρα
-   time: 
+   time: ""
  - day: Τρίτη
-   time: 
+   time: ""
  - day: Τετάρτη
-   time: 
+   time: ""
  - day: Πέμπτη
-   time: 
+   time: ""
  - day: Παρασκευή
-   time: 
+   time: ""
  - day: Σάββατο
-   time: 
+   time: ""
  - day: Κυριακή
-   time: 
+   time: ""
 ---
 
 

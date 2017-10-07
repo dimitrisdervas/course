@@ -1,17 +1,18 @@
 ---
-title: Tenchikan
-city: Θεσσαλονίκη
-perioxi: Τούμπα
-category: Πολεμικές τέχνες
-subcategory: 
+title: "Tenchikan"
+city: "Θεσσαλονίκη"
+perioxi: "Τούμπα"
+categories: Πολεμικές τέχνες
+subcategories: [Aikido]
 logo-img: 
-address: 17 noembriou 18
+address: "17 noembriou 18"
 phone: 2310345115
 email: 
 courses: [Aikido ]
-place: DOJO
+places: [DOJO]
 rensponsible-tel: 
-rensponsible: 
+rensponsibles: ""
+syllogoi: 
 ---
 
 

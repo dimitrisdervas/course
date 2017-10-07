@@ -30,6 +30,9 @@ video {
 header {
     @include full;
 }
+.header-age {
+  @include full;
+}
 .filter-wrapper {
     @include container;
    @include break;

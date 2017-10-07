@@ -1,8 +1,8 @@
 ---
-title: handball
-school: ΧΑΝΘ
-place: ΧΑΝΘ
-city: Θεσσαλονίκη
+title: "handball"
+school: "ΧΑΝΘ"
+place: "ΧΑΝΘ"
+city: "Θεσσαλονίκη"
 category: Αθλητισμός
 subcategories: Handball
 instructor: 
@@ -12,19 +12,19 @@ levels: novice
 practices: 0
 days:
  - day: Δευτέρα
-   time: 
+   time: ""
  - day: Τρίτη
-   time: 
+   time: ""
  - day: Τετάρτη
-   time: 
+   time: ""
  - day: Πέμπτη
-   time: 
+   time: ""
  - day: Παρασκευή
-   time: 
+   time: ""
  - day: Σάββατο
-   time: 
+   time: ""
  - day: Κυριακή
-   time: 
+   time: ""
 ---
 
 

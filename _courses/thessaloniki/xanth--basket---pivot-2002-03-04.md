@@ -1,8 +1,8 @@
 ---
-title: PIVOT 2002-03-04
-school: ΧΑΝΘ
-place: ΧΑΝΘ
-city: Θεσσαλονίκη
+title: "PIVOT 2002-03-04"
+school: "ΧΑΝΘ"
+place: "ΧΑΝΘ"
+city: "Θεσσαλονίκη"
 category: Αθλητισμός
 subcategories: Basket
 instructor: 
@@ -12,19 +12,19 @@ levels: intermediate
 practices: 3
 days:
  - day: Δευτέρα
-   time: 
+   time: ""
  - day: Τρίτη
-   time: 15:00-16:00
+   time: "15:00-16:00"
  - day: Τετάρτη
-   time: 
+   time: ""
  - day: Πέμπτη
-   time: 
+   time: ""
  - day: Παρασκευή
-   time: 
+   time: ""
  - day: Σάββατο
-   time: 10:00-11:00
+   time: "10:00-11:00"
  - day: Κυριακή
-   time: 10:00-11:00
+   time: "10:00-11:00"
 ---
 
 

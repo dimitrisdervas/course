@@ -35,6 +35,8 @@ collections:
     output: true
   levels:
     output: true
+  ages:
+    output: true
 
 defaults:
  -
@@ -51,7 +53,7 @@ defaults:
     scope:
       type: "places"
     values:
-     layout: "default"
+     layout: "place-layout"
  -
     scope:
       path: "categories"
@@ -76,6 +78,12 @@ defaults:
     values:
      layout: "agecategories-layout"
      permalink: /agecategories/:slug
+ -
+    scope:
+      type: "ages"
+    values:
+     layout: "age-layout"
+     permalink: /ages/age--:slug
 
      
 # page_gen:

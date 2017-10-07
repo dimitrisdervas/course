@@ -36,28 +36,41 @@ $font-family-heading: Open sans, Helvetica, Arial, sans-serif;
          }
       }
       .cards-perioxi {
-         
+         font-size: 14px;
+         font-weight: normal;
       }
    }
    .cards-school-categories {
-      &:hover {
-         background: $lighter-grey;
-      }
+
    }
    .cards-school {
-      padding: 1rem 1rem 0;
       color: #6E6E6E;
       .cards-subtitle {
          font-size: 15px;
          a {
-            display: block;
-            color: $grey;
+             padding: 8px 16px;
+             color: #999999;
+             display: flex;
+             flex: 1;
+         }
+         a:hover {
+            background: $lighter-grey;
+            color: #AB1386; 
          }
       }
    }
    .cards-categories {
       font-size: 14px;
       padding: 0 1rem 1rem;
-      font-weight: bold;
+      display: flex;
+      div {
+       margin: 0 4px;
+      }
+      a {
+         color: #6b6b6b;
+      }
+      a:hover {
+             color: #BB135F;
+      }
    }
 }

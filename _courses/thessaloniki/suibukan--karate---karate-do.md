@@ -1,8 +1,8 @@
 ---
-title: Karate Do
-school: Suibukan
-place: Δημοτικό Θεατρο Δάσους
-city: Θεσσαλονίκη
+title: "Karate Do"
+school: "Suibukan"
+place: "Δημοτικό Θεατρο Δάσους"
+city: "Θεσσαλονίκη"
 category: Πολεμικές τέχνες
 subcategories: Karate
 instructor: Βελησσαρίου Π.
@@ -12,19 +12,19 @@ levels: novice
 practices: 2
 days:
  - day: Δευτέρα
-   time: 18:30-20:30
+   time: "18:30-20:30"
  - day: Τρίτη
-   time: 
+   time: ""
  - day: Τετάρτη
-   time: 18:30-20:30
+   time: "18:30-20:30"
  - day: Πέμπτη
-   time: 
+   time: ""
  - day: Παρασκευή
-   time: 
+   time: ""
  - day: Σάββατο
-   time: 
+   time: ""
  - day: Κυριακή
-   time: 
+   time: ""
 ---
 
 

@@ -1,8 +1,8 @@
 ---
-title: Basket 2006
-school: GBA
-place: ΤΕΦΑΑ ΘΕΡΜΗ
-city: Θεσσαλονίκη
+title: "Basket 2006"
+school: "GBA"
+place: "ΤΕΦΑΑ ΘΕΡΜΗ"
+city: "Θεσσαλονίκη"
 category: Αθλητισμός
 subcategories: Basket
 instructor: 
@@ -12,19 +12,19 @@ levels: intermediate
 practices: 2
 days:
  - day: Δευτέρα
-   time: 
+   time: ""
  - day: Τρίτη
-   time: 18:30-20:30
+   time: "18:30-20:30"
  - day: Τετάρτη
-   time: 
+   time: ""
  - day: Πέμπτη
-   time: 18:30-20:30
+   time: "18:30-20:30"
  - day: Παρασκευή
-   time: 
+   time: ""
  - day: Σάββατο
-   time: 
+   time: ""
  - day: Κυριακή
-   time: 
+   time: ""
 ---
 
 

@@ -1,8 +1,8 @@
 ---
-title: Basket 2010-2011
-school: GBA
-place: ΤΕΦΑΑ ΘΕΡΜΗ
-city: Θεσσαλονίκη
+title: "Basket 2010-2011"
+school: "GBA"
+place: "ΤΕΦΑΑ ΘΕΡΜΗ"
+city: "Θεσσαλονίκη"
 category: Αθλητισμός
 subcategories: Basket
 instructor: 
@@ -12,19 +12,19 @@ levels: novice
 practices: 2
 days:
  - day: Δευτέρα
-   time: 18:30-20:30
+   time: "18:30-20:30"
  - day: Τρίτη
-   time: 
+   time: ""
  - day: Τετάρτη
-   time: 18:30-20:30
+   time: "18:30-20:30"
  - day: Πέμπτη
-   time: 
+   time: ""
  - day: Παρασκευή
-   time: 
+   time: ""
  - day: Σάββατο
-   time: 
+   time: ""
  - day: Κυριακή
-   time: 
+   time: ""
 ---
 
 

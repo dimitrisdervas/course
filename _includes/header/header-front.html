@@ -31,3 +31,13 @@
 
 </header>
 
+<div class="header-age">
+     <div class="menu-age">
+        <h2>Ηλικία</h2>
+        <ul>
+           {% for menu in site.ages %}            
+               <li id="filter-{{menu.slug}}">{{menu.title}}</li>  
+             {% endfor %}
+          </ul>
+        </div>
+</div>

@@ -4,9 +4,8 @@ layout: default
 
 <div id="courses" class="cards">
 
-   
 <!--  for listjs   copied from http://codepen.io/jamesbarnett/pen/kcwzq -->
- <ul id="courses-ul" class="list">  
+ <ul id="courses-ul" class="list">
    {% for course in site.courses %}
 
 <!--  Variables -->
@@ -25,37 +24,54 @@ layout: default
 <!--     Begin List -->
    <li class="cards-item">
 <!-- Cards  Image -->
-      <div class="cards-img">
+     <!--  <div class="cards-img">
          <img src="http://placehold.it/350x250">
-         </div>
+         </div> -->
 <!-- Cards Text -->
       <div class="cards-text">
    <!-- Course Title -->
-           <div class="cards-title">
+
+        <div class="cards-title">
               <a class="cardstitle" href="{{ site.baseurl}}/{{ course.url }}">{{ course.title }}</a>
-         </div>
-         <div class="cards-perioxi">
-            {{course.city}}-{{ placePerioxi }}
-         </div>
-         <p>{{ course.content | split:"<!-- more -->" | first | strip_html | truncate:300 }}
-            {% if course.content | size > 300 %}
+             <div class="cards-perioxi">{{course.city}}-{{ course.city }}</div>
+        </div>
+
+<!--         <div class="cards-school">
+          <div class="cards-subtitle">
+            <a href="{{ site.baseurl}}/{{ schoolUrl }}">{{ schoolTitle }}</a>
+          </div>
+        </div> -->
+
+<!-- DESCRIPTION -->
+<!--<p>{{ course.content | split:"more" | first | strip_html | truncate:300 }}
+{% if course.content != ''| size > 300 %}
                <strong>περισσότερα</strong>
             {% endif %}
-         </p>
-         </div>
+</p> -->
+      </div>
       <div class="cards-school-categories">
                 <div class="cards-school">
-                <div class="cards-subtitle"><a href="{{ site.baseurl}}/{{ schoolUrl }}">{{ schoolTitle }}</a></div>
-                  </div>   
+                  <div class="cards-subtitle">
+                    <a class="school" href="{{ site.baseurl}}/{{ schoolUrl }}">{{ schoolTitle }}</a>
+                  </div>
+                </div>   
       <!--   Categories -->
          <div class="cards-categories">
-            <span><a class="categories" href="{{site.baseurl}}/categories/{{ course.categories }}">{{ course.categories}}</a></span>,
-            <span ><a class="subcategory" href="{{site.baseurl}}/subcategories/{{ course.subcategories | | slugify }}">{{ course.subcategories }}</a></span>,
-            <span ><a class="age" href="{{site.baseurl}}/agecategories/{{ course.agecategories }}">{{ course.agecategories }}</a></span>,
-            <span ><a class="level" href="{{site.baseurl}}/levels/{{ course.levels }}">{{ course.levels }}</a></span>
+            <div><a class="categories" href="{{site.baseurl}}/categories/{{ course.categories }}">{{ course.categories}},</a>
+            </div>
+            <div ><a class="subcategory" href="{{site.baseurl}}/subcategories/{{ course.subcategories | | slugify }}">{{ course.subcategories }},</a>
+            </div>
+            <div ><a class="level" href="{{site.baseurl}}/levels/{{ course.levels }}">{{ course.levels }}</a>
+            </div>
+            ηλικία:
+            {% for age in course.ages %}
+            <div>
+            <a class="age" href="{{site.baseurl}}/ages/age--{{ age }}">{{ age }}{% unless forloop.last %},{% endunless %}</a>
+            </div>
+            {% endfor %}
             </div>
          </div>
-      </li>      
-    {% endfor %} 
+      </li>
+    {% endfor %}
   </ul>
 </div>

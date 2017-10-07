@@ -1,8 +1,8 @@
 ---
-title: Volley Βεργίνα
-school: Βεργίνα
-place: Βεργίνα Γήπεδο
-city: Θεσσαλονίκη
+title: "Volley Βεργίνα"
+school: "Βεργίνα"
+place: "Βεργίνα Γήπεδο"
+city: "Θεσσαλονίκη"
 category: Αθλητισμός
 subcategories: Volley
 instructor: 
@@ -12,19 +12,19 @@ levels: novice
 practices: 3
 days:
  - day: Δευτέρα
-   time: 
+   time: ""
  - day: Τρίτη
-   time: 
+   time: ""
  - day: Τετάρτη
-   time: 
+   time: ""
  - day: Πέμπτη
-   time: 
+   time: ""
  - day: Παρασκευή
-   time: 15:00-16:00
+   time: "15:00-16:00"
  - day: Σάββατο
-   time: 11:00-12:00
+   time: "11:00-12:00"
  - day: Κυριακή
-   time: 11:00-12:00
+   time: "11:00-12:00"
 ---
 
 

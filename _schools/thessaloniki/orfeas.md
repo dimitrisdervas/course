@@ -1,17 +1,18 @@
 ---
-title: Ορφέας
-city: Θεσσαλονίκη
-perioxi: Καλαμαριάς
-category: Αθλητισμός
-subcategory: 
+title: "Ορφέας"
+city: "Θεσσαλονίκη"
+perioxi: "Καλαμαριάς"
+categories: Αθλητισμός
+subcategories: [Ενόργανη,Μοντέρνος Χορός]
 logo-img: 
-address: 
+address: ""
 phone: 
 email: 
 courses: []
-place: 
+places: []
 rensponsible-tel: 
-rensponsible: 
+rensponsibles: ""
+syllogoi: 
 ---
 
 

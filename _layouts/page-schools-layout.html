@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<div id="schools" class="cards">
+
+<!--  for listjs   copied from http://codepen.io/jamesbarnett/pen/kcwzq -->
+ <ul id="courses-ul" class="list">
+   {% for school in site.schools %}
+
+
+<!--     Begin List -->
+   <li class="cards-item">
+    <div class="card-school">
+            <div class="cards-school-logo">
+              <a class="cardtitle" href="{{ site.baseurl}}/{{ school.url }}"><img src="http://placehold.it/80x80"></a></div>
+            <div class="card-school-title">
+                <a class="cardstitle" href="{{ site.baseurl}}/{{ school.url }}">{{ school.title }}</a>
+                <div class="cards-perioxi">
+                  {{school.city}}-{{ school.perioxi }}
+                </div>
+            </div>
+    </div>
+
+      <!-- COURSES -->
+      <div class="card-school-subcategories">
+        <ul>
+
+<!-- SUBCATEGORIES -->
+  <!--         {% for schoolcourse in school.subcategories %}
+            <li>{{schoolcourse}}</li>
+          {% endfor %} -->
+
+<!-- COURSES -->
+       <!--  {% for schoolcourse in school.courses %}
+        <li>
+          <div class="courses">{{schoolcourse}}</div>
+           {% assign course = site.courses | where: 'title', schoolcourse %}
+           {% for age in course %}
+           <div class="course-age">(ηλικ.:{% for age2 in age.ages %}{{age2}}{% unless forloop.last %},{% endunless %}{% endfor %})</div>
+           {% endfor %}
+           </li>
+        {% endfor %} -->
+        </ul>
+      </div>
+
+
+        <div class="cards-school-categories">
+            <div class="cards-categories">
+              <span>
+                <a class="categories" href="{{site.baseurl}}/categories/{{ course.categories }}">{{ school.category}}</a>
+              </span>
+              <span>
+          {% for schoolcourse in school.subcategories %}
+            {{schoolcourse}}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+            </div>
+        </div>
+
+
+      </li>
+    {% endfor %}
+  </ul>
+</div>
