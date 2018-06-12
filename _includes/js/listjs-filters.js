@@ -1,6 +1,6 @@
 // Filter for each category
-  {% for menu in site.categories %} 
-     $('#filter-{{ menu.slug }}').click(function() {
+  {% for menu in site.categories %}
+   $('#filter-{{ menu.slug }}').click(function() {
      coursesList.filter(function(item) {
        if (item.values().categories == "{{ menu.title }}") {
          return true;
@@ -13,12 +13,18 @@
  {% endfor %}
 
 
+// SHOW ALL
+$('#filter-none').click(function() {
+  coursesList.filter();
+  return false;
+});
+
 // Filter for each SubCategory
  {% for menutop in site.categories %}
-    {% for menu in menutop.subcategories %}      
+    {% for menu in menutop.subcategories %}
     {% assign subcategory = site.subcategories | where: 'title' ,menu %}
       {% for menu-subcategory in subcategory %}
-       $('#filter-{{ menu-subcategory.slug }}').click(function() {
+      $('#filter-{{ menu-subcategory.slug }}').click(function() {
           coursesList.filter(function(item) {
              if (item.values().subcategory == "{{ menu-subcategory.title }}") {
                 return true;
@@ -33,40 +39,11 @@
  {% endfor %}
 
 
-// // Filter for each Level
-//  {% for level in site.levels %}
-//        $('#filter-{{ level.slug }}').click(function() {
-//           coursesList.filter(function(item) {
-//              if (item.values().level == "{{ level.slug }}") {
-//                 return true;
-//              } else {
-//                 return false;
-//              }
-//           });
-//           return false;
-//        });
-//  {% endfor %}
-
-// // Filter for each Agecategories
-//  {% for age in site.agecategories %}
-//        $('#filter-{{ age.slug }}').click(function() {
-//           coursesList.filter(function(item) {
-//              if (item.values().age == "{{ age.slug }}") {
-//                 return true;
-//              } else {
-//                 return false;
-//              }
-//           });
-//           return false;
-//        });
-//  {% endfor %}
-
-
 // Filter for each Age
- {% for age in site.ages %}
+ {% for age in site.agecategories %}
        $('#filter-{{ age.slug }}').click(function() {
           coursesList.filter(function(item) {
-             if (item.values().age == "{{ age.title }}") {
+             if (item.values().agecategories == "{{ age.title }}") {
                 return true;
              } else {
                 return false;

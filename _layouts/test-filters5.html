@@ -1,0 +1,126 @@
+---
+layout: default
+---
+<!-- https://codepen.io/wmg481/pen/RRRKdm -->
+
+
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+   <button class="sort" data-sort="categories">
+    Sort by name
+  </button>
+<!--    Menu -->
+       <div class="menu">
+          <ul>
+            <li>
+              <label>
+                <input class="filter-all" type="radio" value="all" name="categories" id="categories-all" checked /> All categories
+              </label>
+            </li>
+             {% for menu in site.categories %}
+                 <li>
+                 <label>
+                  <input class="filter" type="radio" value="{{menu.title}}" name="categories" id="{{menu.title}}" /> {{menu.title}}
+                  </label>
+                  </li>
+               {% endfor %}
+            </ul>
+        </div>
+         <div class="menu">
+          <ul>
+            <li>
+              <label>
+                <input class="filter-all" type="radio" value="all" name="subcategories" id="subcategories-all" checked /> All categories
+              </label>
+            </li>
+             {% for menu in site.subcategories %}
+                 <li>
+                 <label>
+                  <input class="filter" type="radio" value="{{menu.title}}" name="subcategories" id="{{menu.title}}" />{{menu.title}}
+                  </label>
+                  </li>
+               {% endfor %}
+            </ul>
+        </div>
+     </div>
+
+<div class="header">
+     <div class="menu">
+        <h2>Ηλικία</h2>
+        <ul>
+          <li>
+            <label>
+              <input class="filter-all" type="radio" value="all" name="agecategories" id="agecategories-all" checked /> All age
+            </label>
+          </li>
+           {% for menu in site.agecategories %}
+            <li>
+               <label>
+                <input class="filter" type="radio" value="{{menu.title}}" name="agecategories" id="{{menu.slug}}" />{{menu.title}}
+                </label>
+                </li>
+             {% endfor %}
+          </ul>
+        </div>
+
+<!-- CLEAR BUTTON -->
+</div>
+<button class="btn btn-danger" onclick="resetList();">Clear</button>
+</header>
+
+<div id="filters5" class="cards">
+<!--  for listjs   copied from http://codepen.io/jamesbarnett/pen/kcwzq -->
+ <ul class="list">
+   {% for course in site.courses %}
+   <!--  Variables -->
+         <!-- Find School url -->
+              {% assign schools = site.schools | where: 'title' , course.school %}
+              {% for school in schools %}
+                 {% capture  schoolTitle %}{{ school.title }}{% endcapture %}
+                 {% capture  schoolUrl %}{{ school.url }}{% endcapture %}
+         <!--    Find Place Perioxi -->
+                     {% assign places = site.places | where: 'title', school.place %}
+                     {% for place in places %}
+                        {% capture  placePerioxi %}{{ place.perioxi }}{% endcapture %}
+                     {% endfor %}
+              {% endfor %} 
+<!--   End Variables -->
+<!--     Begin List -->
+   <li class="cards-item">
+<!-- Cards Text -->
+      <div class="cards-text">
+<!-- Course Title -->
+
+        <div class="cards-title">
+              <a class="cardstitle" href="{{ site.baseurl}}/{{ course.url }}">{{ course.title }}</a>
+             <div class="cards-perioxi">{{course.city}}-{{ course.city }}</div>
+        </div>
+      </div>
+      <div class="cards-school-categories">
+        <div class="cards-school">
+                                   <div class="cards-subtitle">
+                    <a class="school" href="{{ site.baseurl}}/{{ schoolUrl }}">{{ schoolTitle }}</a>
+                  </div>
+        </div>
+
+
+<!--   Categories -->
+        <div class="cards-categories">
+            <div>
+              <a class="categories" href="{{site.baseurl}}/categories/{{ course.categories }}">{{ course.categories}},</a>
+            </div>
+            <div>
+              <a class="subcategory" href="{{site.baseurl}}/subcategories/{{ course.subcategories | slugify }}">{{ course.subcategories }},</a>
+            </div>
+            <div>
+              <a class="level" href="{{site.baseurl}}/levels/{{ course.levels }}">{{ course.levels }}</a>
+            </div>
+            <div>
+              <a class="agecategories" href="{{site.baseurl}}/levels/{{ course.agecategories }}">{{ course.agecategories }}</a>
+            </div>
+        </div>
+      </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,66 @@
+---
+# Layouts must stay in HTML
+---
+
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+  <body>
+    {% include all-site-pages.html %}
+     <div class="page">
+        {% case page.tag %}
+         {% when 'simple-categories' %}
+           {% include header/header-filters-simple.html %}
+           {% include searchbar.html %}
+         {% when 'categories' %}
+           {% include header/header-filters-multiple.html %}
+           {% include searchbar.html %}
+         {% else %}
+            {% include header/header-categories.html %}
+       {% endcase %}
+        
+        <div class="content">
+           {{ content }}
+        </div>
+        
+        {% include footer.html %}
+     </div>
+
+
+
+     <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+        {% case page.tag %}
+         {% when 'categories' %}
+            <script type="text/javascript" src="{{ site.baseurl }}/assets/js/js-multiple-filters.js"></script>
+         {% when 'simple-categories' %}
+            <script type="text/javascript" src="{{ site.baseurl }}/assets/js/js-frontpage.js"></script>
+         {% else %}
+             <script type="text/javascript" src="{{ site.baseurl }}/assets/js/js-page.js"></script>
+         {% endcase %}
+
+
+<!-- ANALYTICS something to check on github -->
+<!--        <script type="text/javascript">
+          $('.stat').on('click', function() {
+            var $stats = $('.stat:checked');
+            var $items = $('.list li');
+
+            if ($stats.length == 0) {
+              $items.show();
+              return;
+            }
+
+            $items.hide();
+            $stats.each(function() {
+              var $stat = $(this);
+              $items.filter(function() {
+                return $(this).data($stat.data('type')) == $stat.data('id');
+              }).show();
+              })
+          });
+        </script>
+ -->
+
+  </body>
+</html>

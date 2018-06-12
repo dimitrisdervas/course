@@ -1,5 +1,5 @@
 var options = {
-  valueNames: [ 'categories' , 'age' , 'level', 'cardstitle', 'subcategory', 'school'],
+  valueNames: [ 'categories' , 'agecategories' , 'level', 'cardstitle', 'subcategory', 'school' ],
   searchClass: "search"
 };
 

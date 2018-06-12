@@ -6,9 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/course" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://activecoala.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
@@ -18,7 +16,9 @@ excerpt_separator: </teaser>
 permalink: pretty
 
 sass:
-    sass_dir: /_includes
+    sass_dir: _resources/sass
+
+collections_dir: _collections
 
 collections:
   courses:
@@ -37,10 +37,13 @@ collections:
     output: true
   ages:
     output: true
+  organizations:
+    output: true
+  cities:
+    output: true
 
 defaults:
- -
-    scope:
+ -  scope:
       type: "courses"
     values:
       layout: "course-layout"
@@ -48,19 +51,24 @@ defaults:
     scope:
       type: "schools"
     values:
-     layout: "school-layout"  
+      layout: "school-layout"
  -
     scope:
       type: "places"
     values:
-     layout: "place-layout"
+      layout: "place-layout"
  -
     scope:
-      path: "categories"
       type: "pages"
     values:
       layout: "categories-layout"
       permalink: /categories/:slug
+ -
+    scope:
+        type: "cities"
+    values:
+      layout: "layout-page-schools"
+      permalink: /cities/:slug
  -
     scope:
       type: "levels"
@@ -84,8 +92,14 @@ defaults:
     values:
      layout: "age-layout"
      permalink: /ages/age--:slug
+ -
+    scope:
+      type: "organizations"
+    values:
+     layout: "layout-default"
+     permalink: /organization/:slug
 
-     
+
 # page_gen:
 #   - data: 'courses'
 #     template: 'airtable/course'
@@ -98,7 +112,7 @@ defaults:
 #     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Place?api_key=keyQVGtEJqpbYYGS0'
 #     cache: true
 #   - data: syllogos
-#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Syllogos?api_key=keyQVGtEJqpbYYGS0'
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Organizations?api_key=keyQVGtEJqpbYYGS0'
 #     cache: true
 #   - data: schools
 #     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Schools?api_key=keyQVGtEJqpbYYGS0'
@@ -121,35 +135,24 @@ defaults:
 #   - data: age
 #     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Age?api_key=keyQVGtEJqpbYYGS0'
 #     cache: true
-
-## CLOUDCANNON
-
-ages:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-  - 13
-  - 14
-  - 15
-  - 16
-  - 17
-  - 18
-
-categories: 
-  - Χορός
-  - Πολεμικές τέχνες
-  - Μουσική
-  - Αθλητισμός
-
+#   - data: cities
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Cities?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: agecategories
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Agecategories?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: perioxi
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Perioxi?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: rensponsibles
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Rensponsibles?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: orgcategories
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/Org%20Categories?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
+#   - data: federations
+#     json: 'https://api.airtable.com/v0/appHI50bSISWqOxUR/federations?api_key=keyQVGtEJqpbYYGS0'
+#     cache: true
 
 
 exclude: ["_gulp-templates",
@@ -159,4 +162,10 @@ exclude: ["_gulp-templates",
           "Gemfile.lock",
           "gulpfile.js",
           "node_modules",
-          "package.json"]
+          "package.json",
+          "yarn.lock"]
+
+
+include: [
+    "_pages"
+  ]

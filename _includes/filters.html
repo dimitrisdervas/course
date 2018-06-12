@@ -1,19 +1,64 @@
- <div class="filter-wrapper">
- <!-- LEVELS -->
-     <div class="filter-categories left">
+<!-- https://codepen.io/wmg481/pen/RRRKdm -->
+<header class="navigation multiple-filters" role="banner">
+  <div class="navigation-wrapper">
+   <button class="sort" data-sort="categories">
+    Sort by name
+  </button>
+<!--    Menu -->
+       <div class="menu">
+          <ul>
+            <li>
+              <label>
+                <input class="filter-all" type="radio" value="all" name="categories" id="categories-all" checked /> All categories
+              </label>
+            </li>
+             {% for menu in site.categories %}
+                 <li>
+                 <label>
+                  <input class="filter" type="radio" value="{{menu.title}}" name="categories" id="{{menu.title}}" /> {{menu.title}}
+                  </label>
+                  </li>
+               {% endfor %}
+            </ul>
+        </div>
+         <div class="menu">
+          <ul>
+            <li>
+              <label>
+                <input class="filter-all" type="radio" value="all" name="subcategories" id="subcategories-all" checked /> All categories
+              </label>
+            </li>
+             {% for menu in site.subcategories %}
+                 <li>
+                 <label>
+                  <input class="filter" type="radio" value="{{menu.title}}" name="subcategories" id="{{menu.title}}" />{{menu.title}}
+                  </label>
+                  </li>
+               {% endfor %}
+            </ul>
+        </div>
+     </div>
+
+<div class="header">
+     <div class="menu">
+        <h2>Ηλικία</h2>
         <ul>
-           {% for menu in site.levels %}            
-               <li id="filter-{{menu.slug}}" data-category-name="{{menu.slug}}">{{menu.title}}
-               </li>  
+          <li>
+            <label>
+              <input class="filter-all" type="radio" value="all" name="agecategories" id="agecategories-all" checked /> All age
+            </label>
+          </li>
+           {% for menu in site.agecategories %}
+            <li>
+               <label>
+                <input class="filter" type="radio" value="{{menu.title}}" name="agecategories" id="{{menu.slug}}" />{{menu.title}}
+                </label>
+                </li>
              {% endfor %}
           </ul>
-      </div>
-<!-- Agecategories -->
-     <div class="filter-categories right">
-        <ul>
-           {% for menu in site.agecategories %}            
-               <li id="filter-{{menu.slug}}" data-category-name="{{menu.slug}}">{{menu.title}}</li>  
-             {% endfor %}
-          </ul>
-      </div>
+        </div>
+
+<!-- CLEAR BUTTON -->
 </div>
+<button class="btn btn-danger" onclick="resetList();">Clear</button>
+</header>

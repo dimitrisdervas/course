@@ -1,0 +1,22 @@
+---
+title: |
+   ΠΕΙΡΑΪΚΟΣ ΣΥΛΛΟΓΟΣ AIKIDO‏
+city: ["Αθήνα"]
+perioxi: ["ΠΕΙΡΑΙΑΣ"]
+categories: ["Πολεμικές τέχνες"]
+subcategories: ["Aikido"]
+address: ""
+logoimg: "https://www.polemikes-tehnes.gr/pics/logos/b/201726111627150.jpg"
+website: "www.facebook.com/aikido.piraeus?viewer_id=1386950119"
+facebook: ""
+phone: ""
+email: " aikidokoushikan@gmail.com"
+courses: ""
+places: [""]
+rensponsibles: ""
+zipcode: [""]
+UID: "1525"
+---
+
+
+

@@ -1,0 +1,37 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+     
+<!--  Logo -->
+    <div class="logo">
+        <a href="{{ site.baseurl }}"><h2>Active Koala</h2></a>
+        </div>
+
+<!--    Menu -->
+     <div class="menu-categories">
+        <ul>
+           {% for menu in site.categories %}            
+               <li id="filter-{{menu.slug}}" data-category-name="{{menu.slug}}">{{menu.title}}</li>  
+             {% endfor %}
+          </ul>
+        </div>
+<!--      Menu Subcategories -->
+   <div class="menu-subcategories">
+      <ul>     
+         {% for menutop in site.categories %}            
+            {% for menu in menutop.subcategories %}      
+            {% assign subcategory = site.subcategories | where: 'title' ,menu %}
+              {% for menu-subcategory in subcategory %}
+               <li id="filter-{{menu-subcategory.slug}}" class="hide filter-{{menutop.slug}}  menu-subcategories-item" data-category-name="{{menutop.slug}}" data-subcategory-name="{{menu-subcategory.slug}}">{{menu-subcategory.title}}</li>
+              {% endfor %}
+            {% endfor %}
+         {% endfor %}
+         </ul>
+        </div>
+     </div>
+
+<button class="btn btn-danger" onclick="resetList();">Clear</button>
+   <button class="sort" data-sort="categories">
+    Sort by name
+  </button>
+
+</header>

@@ -1,0 +1,45 @@
+---
+layout: layout-default-schools
+---
+
+<div class="page-title">{{ page.title }}</div>
+
+<div id="courses" class="cards">
+
+<!--  for listjs   copied from http://codepen.io/jamesbarnett/pen/kcwzq -->
+ <ul id="schools-list" class="list">
+{% assign schools-city =  site.schools | where: "city",page.title %}
+
+{% for school in schools-city limit: 250 %}
+<!--     Begin List -->
+   <li class="cards-item">
+      <div class="cards-school-categories">
+            <a class="categories" href="{{site.baseurl}}/categories/{{ school.categories }}">{{ school.categories }}</a>
+      </div>
+        <div class="cards-content">
+            <div class="cards-school-logo">
+              <a class="cardtitle" href="{{ site.baseurl}}/{{ school.url }}"><img src="{% if school.logo-img != '' %}{{school.logo-img}}{% else %}http://via.placeholder.com/80x80?text=Active+Coala{% endif %}"></a>
+            </div>
+            <div class="cards-title">
+                <a class="cardstitle" href="{{ site.baseurl}}/{{ school.url }}">{{ school.title }}</a>
+          </div>
+
+        </div>
+            <div class="cards-categories">
+<!--               {% if school.facebook != '' %}
+                <div class="cards-facebook">
+                  <a href="{{school.facebook }}">facebook{{school.facebook }}</a>
+                </div>
+              {% endif %}
+               <div class="cards-website">
+                 {{school.website }}
+                </div> -->
+                <div class="cards-subcategories" >
+                  <a class="subcategory" href="{{site.baseurl}}/subcategories/{{ school.subcategories }}">{{ school.subcategories }}</a>
+                </div>
+                <div class="cards-perioxi">{{ school.perioxi | smartify }}</div>
+            </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

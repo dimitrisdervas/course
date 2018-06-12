@@ -1,0 +1,95 @@
+/*
+    Document   : newcourse/_includes/sass/_layout.scss
+    Created on : 2015-05-01 09:37 AM
+    Author     : dimdervas
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+html {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+embed,
+img,
+object,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+    // @include full;
+}
+header {
+    // @include full;
+}
+.header-age {
+  // @include full;
+}
+.filter-wrapper {
+    // @include container;
+   // @include break;
+   width: 100%;
+}
+.search-field {
+   // @include container;
+   @include break;
+   width: 100%;
+}
+.content {
+   // @include container;
+   // clear: both;
+}
+.navigation-wrapper {
+   // @include container;
+}
+.footer-wrapper {
+    @include full;
+   .footer {
+      @include container;
+   }
+   .footer-links {
+      @include container;
+      ul {
+         // @include gallery ( 4 of 12);
+      }
+   }
+}
+/* Layout with sidebar - course layout */
+.course-img {
+    // @include container;
+}
+.content-sidebar {
+   // @include span(8 of 12);
+}
+.sidebar {
+    // @include span(4 last of 12);
+}
+/* Course layout - Content sidebar */
+section {
+   // @include container;
+   margin-bottom: 4rem;
+}
+.course-program {
+   // @include container;
+}
+.school {
+   // @include container;
+   .school-image {
+      // @include span(3 of 8);
+   }
+   .school-details {
+      // @include span(5 last of 8);
+   }
+}
+.place {
+   // @include container;
+}
+#map { height: 380px; }
